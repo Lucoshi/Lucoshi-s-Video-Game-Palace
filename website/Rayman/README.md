@@ -1,2 +1,4 @@
 Site with lost stuff:
-https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/website/Rayman/Cyberstef%20Rayman%20Microsites/Rayman%202/index.html
+- [Cyberstef's Rayman 2](https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/website/Rayman/Cyberstef_Rayman_Microsites/Rayman_1/index.html)
+- [Cyberstef's Rayman 2](https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/website/Rayman/Cyberstef_Rayman_Microsites/Rayman_2/index.html)
+- [Cyberstef's Rayman 2](https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/website/Rayman/Cyberstef_Rayman_Microsites/Rayman_M/index.html)
