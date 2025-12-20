@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>Welcome to Rayman2, The Great Escape, an action/adventure 3D game by Ubi Soft Entertainment</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <SCRIPT language="JavaScript">
+<!--
+function MM_swapImage() { //v1.0
+  var i,theObj,j=0,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    theObj = eval(MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1])
+    if (theObj != null) {
+      swapArray[j++] = theObj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=theObj)?theObj.src:oldArray[j];
+      theObj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+var S=1;
+var D=100;
+function ugoku(){
+	MM_swapImage('document.scroll','document.scroll','images/anim_roue.gif');
+	window.setTimeout("MM_swapImage('document.scroll','document.scroll','images/roue.gif');",10000);
+	for(S; S<=D;S++){
+		parent.txt.scroll(0,S);
+	}
+	S=S+1;
+	D=D+100;
+}
+function resetsd(){
+	S=1;
+	D=100;
+}
+function swapresetsd(){
+	MM_swapImgRestore();
+	resetsd();
+}
+
+function MM_displayStatusMsg(msgStr) { //v1.2
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+
+
+
+function MM_swapImgRestore() { //v1.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+function MM_preloadImages() { //v1.2
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    var preloadArray = new Array();
+    for (var i=0; i<imgFiles.length; i++) {
+      preloadArray[i] = new Image;
+      preloadArray[i].src = imgFiles[i];
+    }
+  }
+}
+//-->
+</script>
+</HEAD>
+
+<BODY bgcolor="#000000" background="images/rayman2_bg_top.jpg">
+<script language='JavaScript'>
+<!--
+  MM_preloadImages('images/anim_roue.gif');
+//-->
+</script>
+<table border="0" width="75%">
+  <tr>
+    <td width="15%"><A href="javascript:ugoku();"  onmouseout="swapresetsd(); MM_swapImgRestore()" onMouseOver="MM_swapImage('document.scroll','document.scroll','images/anim_roue.gif','MM_swapImage1'); MM_displayStatusMsg('Scroll');return document.MM_returnValue;"><img src="images/roue.gif" width="63" height="62" border="0" name="Scroll"></a></td>
+    <td width="13%"><img src="images/blank.gif" width="59" height="62" border="0"></td>
+    <td width="67%"><a href="rayman2_txt_fs.html" target="txt" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue;"><img src="images/logo.gif" width="130" height="53" border="0" alt="Home"></a></td>
+    <td width="2%"><img src="images/blank.gif" width="59" height="62" border="0"></td>
+    <td width="3%"><a href="maps/maps.html" target="txt" onMouseOver="MM_displayStatusMsg('Maps');return document.MM_returnValue;"><img src="images/blank.gif" width="172" height="62" border="0" alt="Maps"></a></td>
+  </tr>
+</table>
+</BODY>
+</HTML>
