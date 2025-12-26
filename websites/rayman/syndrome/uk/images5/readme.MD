@@ -1,7 +1,7 @@
 The lost images:
 
 main folder
-menu1_04
+* [ ] menu1_04
 
 im-perso
 perso-a_10.gif
