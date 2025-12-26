@@ -51,7 +51,6 @@ perso-w
 * [ ] amis_29.gif
 * [ ] amis_30.gif
 * [ ] amis_32.gif
-* [ ] amis_33.gif
 * [ ] amis_36.gif
 * [ ] haut.gif
 * [ ] ly.gif
