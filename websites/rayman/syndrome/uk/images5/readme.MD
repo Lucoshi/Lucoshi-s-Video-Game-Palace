@@ -1,6 +1,7 @@
 The lost images:
 
 main folder
+* [ ] bkg.gif
 * [ ] menu1_04
 * [ ] menu1_08
 * [ ] menu1_09
@@ -83,7 +84,6 @@ perso-w
 * [ ] amis_28.gif
 * [ ] amis_29.gif
 * [ ] amis_30.gif
-* [ ] amis_32.gif
 * [ ] amis_36.gif
 * [ ] haut.gif
 * [ ] ly.gif
