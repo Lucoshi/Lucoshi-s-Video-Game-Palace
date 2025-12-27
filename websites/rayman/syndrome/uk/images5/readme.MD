@@ -7,8 +7,6 @@ main folder
 * [ ] menu1_09
 * [ ] menu1_10
 * [ ] menu1_11
-* [ ] menu1_15
-* [ ] menu1_16
 * [ ] menu2_03
 * [ ] menu2_04
 * [ ] menu2_05
