@@ -2,6 +2,39 @@ The lost images:
 
 main folder
 * [ ] menu1_04
+* [ ] menu1_08
+* [ ] menu1_09
+* [ ] menu1_10
+* [ ] menu1_11
+* [ ] menu1_15
+* [ ] menu1_16
+* [ ] menu2_03
+* [ ] menu2_04
+* [ ] menu2_05
+* [ ] menu2_06
+* [ ] menu2_07
+* [ ] menu2_08
+* [ ] menu2_09
+* [ ] menu2_10
+* [ ] menu2_11
+* [ ] menu2_12
+* [ ] menu2_13
+* [ ] menu2_14
+* [ ] menu2_15
+* [ ] menu2_16
+* [ ] menu2_17
+* [ ] menu2_18
+* [ ] menu2_19
+* [ ] menu2_20
+* [ ] menu2_21
+* [ ] menu2_22
+* [ ] menu2_24
+* [ ] menu2_25
+* [ ] menu2_26
+* [ ] menu2_27
+* [ ] menu2_28
+* [ ] menu2_30
+* [ ] menu2_31
 
 im-perso
 * [ ] perso-a_10.gif
