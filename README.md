@@ -8,5 +8,4 @@ It is for preservation, also because there are a lot of troublesome trolls in pr
 ## May I help you?
 Of course, Why not?
 ## Anything you have done?
-* [Donkey Kong 64](https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/websites/donkey-kong/64/)
-* [Wario Land 4](https://lucoshi.github.io/Lucoshi-s-Video-Game-Palace/websites/wario/land/4/us/)
+Look at the wiki!
