@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<TITLE>Welcome to Rayman2, The Great Escape, an action/adventure 3D game by Ubi Soft Entertainment</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<SCRIPT language="JavaScript">
+
+function MM_swapImage() { //v1.0
+  var i,theObj,j=0,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    theObj = eval(MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1])
+    if (theObj != null) {
+      swapArray[j++] = theObj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=theObj)?theObj.src:oldArray[j];
+      theObj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+</SCRIPT>
+  <SCRIPT language="JavaScript">
+function MM_swapImgRestore() { //v1.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+</SCRIPT>
+  <script language="JavaScript">
+<!--
+function MM_preloadImages() { //v1.2
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    var preloadArray = new Array();
+    for (var i=0; i<imgFiles.length; i++) {
+      preloadArray[i] = new Image;
+      preloadArray[i].src = imgFiles[i];
+    }
+  }
+}
+
+function MM_displayStatusMsg(msgStr) { //v1.2
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+
+//-->
+</script>
+
+
+</HEAD>
+
+<BODY bgcolor="#000000" background="images/rayman2_bg_bot.jpg">
+<script language='JavaScript'>
+<!--
+  MM_preloadImages('images/goodies_hi.gif');
+  MM_preloadImages('images/story_hi.gif');
+  MM_preloadImages('images/help_anim.gif');
+//-->
+</script>
+<TABLE border="0" vspace="0" hspace="0" cellspacing="0" cellpadding="1">
+  <TR> 
+    <TD width="80" align="CENTER" valign="TOP"><a href="links/link.html" target="txt" onMouseOver="MM_displayStatusMsg('Links'); return document.MM_returnValue"><IMG src="images/blank.gif" width="80" height="72" border="0" alt="Links"></a></TD>
+
+<TD width=101 align="CENTER" valign="BOTTOM"><A href="../story/story_fs.php3?username=&password=" target="_parent" onmouseover="MM_swapImage('document.story','document.story','images/story_hi.gif'); MM_displayStatusMsg('What\'s the story?');" onmouseout="MM_swapImgRestore()"><IMG src="images/story.gif" width=101 height=69 border=0 alt="What's the story?" name="story"></A></TD>    <TD width="30" align="CENTER" valign="TOP"><IMG src="images/blank.gif" width="30" height="72"></TD>
+
+    <TD width="86" align="CENTER" valign="TOP">
+<A href="goodies/goodies.php3?username=&password=" target="txt" onmouseover="MM_swapImage('document.goodies','document.goodies','images/goodies_hi.gif'); MM_displayStatusMsg('Goodies'); return document.MM_returnValue" onmouseout="MM_swapImgRestore()">  
+    <IMG src="images/goodies.gif" width="86" height="72" border="0" alt="Want some Rayman's Goodies?" name="goodies"></A></TD>
+    
+    <!--<TD width="90" align="CENTER" valign="TOP"><img src="images/blank.gif" width="90" height="72"></TD>-->
+    <TD width="250" align="right" valign="bottom" ><A href="mailto:product@ubisoft.qc.ca"><IMG src="images/e-mail_bad.gif" border="0" width="250" height="75" name="dialogue" alt="e-mail"></a></TD>
+    <TD width="10" align="CENTER" valign="TOP"><img src="images/blank.gif" width="10" height="72"></TD>
+    <TD width="55" align="RIGHT" valign="BOTTOM" ><A href="help/help.html" target="txt" onmouseover="MM_swapImage('document.help','document.help','images/help_anim.gif');MM_swapImage('document.dialogue','document.dialogue','images/dialogue_box.gif','MM_swapImage1'); MM_displayStatusMsg('Help');" onmouseout="MM_swapImgRestore();MM_swapImage('document.help','document.help','images/help.gif')"><IMG src="images/help.gif" width="57" height="62" border="0" name="help" alt="Help !!"></A></TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>
+
