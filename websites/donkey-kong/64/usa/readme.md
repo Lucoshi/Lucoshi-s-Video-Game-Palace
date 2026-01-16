@@ -1,0 +1,13 @@
+high/images/nav/col_4_2_1.gif
+high/images/nav/col_4_2_2.gif
+high/images/nav/col_4_2_3.gif
+high/images/nav/col_4_2_4.gif
+high/images/nav/col_4_2_8.gif
+high/images/nav/col_4_2_9.gif
+high/images/nav/nav_03_on.gif
+high/images/nav/nav_08_on.gif
+high/images/nav/nav_09_on.gif
+top_one.html
+update.html
+tour.html
+high/images/mostwanted/mostwanted_nav_03_on.gif
