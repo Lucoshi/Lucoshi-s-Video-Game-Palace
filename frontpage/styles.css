@@ -1,26 +1,84 @@
-/* General Body Styling */
 body {
-  font-family: 'Press Start 2P', cursive; /* Pixelated font */
-  background-color: #1a1a2e; /* Dark game-like background */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+    background-color: #1a1a2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P';
 }
 
-/* Stage Select Grid */
-.stage-select {
-  display: grid;
-  grid-template-columns: repeat(4, 6fr);
+/* The Grid System */
+.index-map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px; /* Increased gap to prevent icons from touching when they grow */
+    padding: 40px;
+    width: 90vw;
 }
 
-.stage {
-  text-align: center;
+/* World Container */
+.world-node {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.stage:hover {
-  transform: scale(1.05);
+.world-node a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.world-node img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    image-rendering: pixelated;
+    transition: transform 0.2s steps(4); 
+}
+
+.world-node:hover img {
+    transform: scale(1.1);
+}
+
+/* Perfect Center HUD Overlay */
+.progress-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 4px solid #ffffff;
+    padding: 12px;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+    z-index: 100;
+    text-align: center;
+}
+
+.world-node:hover .progress-data {
+    opacity: 1;
+}
+
+.percentage-text {
+    color: #ffffff;
+    font-size: 10px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #000000;
+    border: 2px solid #ffffff;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffd700;
 }
