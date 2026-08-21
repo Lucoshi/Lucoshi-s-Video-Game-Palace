@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rayman Website Archive</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #180d16;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url("./images/rayman-web-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT Scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    header {
+
+      background: linear-gradient(to bottom, #ff5db1, #8a2b63);
+      border-bottom: 4px solid #ffd36f;
+      padding: 24px;
+
+    }
+
+    header h1 {
+
+      margin: 0;
+      font-size: 48px;
+
+    }
+
+    header p {
+
+      margin-top: 8px;
+      color: #ffd36f;
+
+    }
+
+    .main-container {
+
+      padding: 40px;
+
+    }
+
+    .intro-box {
+
+      background: rgba(40,18,32,0.92);
+      border: 2px solid #b44c85;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 950px;
+
+    }
+
+    .intro-box h2 {
+
+      margin-top: 0;
+      color: #ffd36f;
+
+    }
+
+    .archive-grid {
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+
+    }
+
+    .archive-link {
+
+      text-decoration: none;
+      color: inherit;
+      display: block;
+
+    }
+
+    .archive-card {
+
+      background: rgba(50,22,40,0.95);
+      border: 2px solid #b44c85;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.2s;
+
+    }
+
+    .archive-card:hover {
+
+      transform: translateY(-5px);
+      border-color: #ffd36f;
+      box-shadow: 0 0 20px rgba(255,211,111,0.25);
+
+    }
+
+    .archive-card img {
+
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #111;
+
+    }
+
+    .archive-card-content {
+
+      padding: 18px;
+
+    }
+
+    .archive-card h3 {
+
+      margin-top: 0;
+
+    }
+
+    .archive-card p {
+
+      color: #d8d8d8;
+      line-height: 1.5;
+
+    }
+
+    .year-tag {
+
+      display: inline-block;
+      margin-top: 10px;
+      background: #6b3a53;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+
+    }
+
+    footer {
+
+      margin-top: 60px;
+      border-top: 1px solid #5e2f48;
+      padding-top: 20px;
+      color: #b7a2af;
+      font-size: 12px;
+
+    }
+
+    .hidden-lum {
+
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #331728;
+      text-decoration: none;
+      font-size: 14px;
+
+    }
+
+    .hidden-lum:hover {
+
+      color: #ffd36f;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🌐 Rayman Website Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Rayman Website Archive</h2>
+
+      <p>
+        This archive preserves official Rayman websites,
+        promotional microsites, Flash content,
+        downloadable materials, web games,
+        and online marketing campaigns.
+      </p>
+
+      <p>
+        Many early Rayman web experiences have been lost,
+        partially preserved, or restored from archived captures.
+      </p>
+
+    </section>
+
+    <section class="archive-grid">
+
+      <!-- Rayman 1 -->
+
+      <a href="rayman1-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/rayman1.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Rayman (1995)</h3>
+
+            <p>
+              Early promotional materials and website captures
+              related to the original Rayman.
+            </p>
+
+            <span class="year-tag">
+              1995
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Rayman 2 -->
+
+      <a href="rayman2-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/rayman2.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Rayman 2 Website</h3>
+
+            <p>
+              Promotional website for Rayman 2:
+              The Great Escape.
+            </p>
+
+            <span class="year-tag">
+              1999
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Rayman 3 -->
+
+      <a href="rayman3-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/rayman3.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Rayman 3 Website</h3>
+
+            <p>
+              Flash-heavy promotional website
+              featuring characters and downloads.
+            </p>
+
+            <span class="year-tag">
+              2003
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Rabbids Era -->
+
+      <a href="raving-rabbids-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/rabbids.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Raving Rabbids Website</h3>
+
+            <p>
+              Archived content from the Rabbids era,
+              including web promotions and downloads.
+            </p>
+
+            <span class="year-tag">
+              2006
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Origins -->
+
+      <a href="rayman-origins-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/origins.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Rayman Origins Website</h3>
+
+            <p>
+              Promotional website for Rayman Origins.
+            </p>
+
+            <span class="year-tag">
+              2011
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Legends -->
+
+      <a href="rayman-legends-site.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/legends.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Rayman Legends Website</h3>
+
+            <p>
+              Official website preservation project
+              and downloadable media archive.
+            </p>
+
+            <span class="year-tag">
+              2013
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Lost Sector -->
+
+      <a href="restoration_sector_rayman.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <img src="./websitearchive/restoration-sector.jpg">
+
+          <div class="archive-card-content">
+
+            <h3>Restoration Sector</h3>
+
+            <p>
+              Archived website fragments that
+              could not be completely restored.
+            </p>
+
+            <span class="year-tag">
+              INCOMPLETE
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Rayman Website Preservation Project<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- web archive recovery 87% -->
+  <!-- one flash file still missing -->
+  <!-- dream forest mirror unreachable -->
+
+  <a class="hidden-lum" href="restoration_sector_rayman.html">
+    ✨
+  </a>
+
+</body>
+
+</html>

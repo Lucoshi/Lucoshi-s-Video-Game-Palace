@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>404 - Archive Entry Not Found</title>
+
+  <style>
+
+    body {
+
+      margin: 0;
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow: hidden;
+
+    }
+
+    body::before {
+
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.75),
+          rgba(0,0,0,0.9)
+        ),
+        url("./images/archive_background.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      z-index: -2;
+
+    }
+
+    body::after {
+
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+
+      pointer-events: none;
+      z-index: -1;
+
+    }
+
+    .container {
+
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+    }
+
+    h1 {
+
+      font-size: 100px;
+      margin: 0;
+
+      color: #d8a24c;
+
+      text-shadow:
+        0 0 10px rgba(216,162,76,0.4);
+
+    }
+
+    h2 {
+
+      margin-top: 10px;
+      font-size: 32px;
+
+    }
+
+    p {
+
+      max-width: 700px;
+      color: #cccccc;
+      line-height: 1.7;
+
+    }
+
+    .archive-box {
+
+      background: rgba(25,25,25,0.92);
+
+      border: 2px solid #444;
+
+      border-radius: 16px;
+
+      padding: 25px;
+
+      margin-top: 25px;
+
+      max-width: 800px;
+
+    }
+
+    .status {
+
+      color: #d8a24c;
+      font-weight: bold;
+
+    }
+
+    .home-button {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 12px 20px;
+
+      background: #d8a24c;
+      color: black;
+
+      text-decoration: none;
+
+      border-radius: 10px;
+
+      font-weight: bold;
+
+      transition: 0.2s;
+
+    }
+
+    .home-button:hover {
+
+      transform: translateY(-2px);
+
+    }
+
+    .small-text {
+
+      margin-top: 30px;
+
+      font-size: 12px;
+
+      color: #666;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>404</h1>
+
+    <h2>Archive Entry Not Found</h2>
+
+    <p>
+
+      The requested page could not be located within
+      Lucoshi's Video Game Palace Archive Network.
+
+    </p>
+
+    <div class="archive-box">
+
+      <p class="status">
+
+        STATUS: ENTRY MISSING
+
+      </p>
+
+      <p>
+
+        Possible causes:
+
+      </p>
+
+      <ul style="text-align:left; max-width:500px; margin:auto;">
+
+        <li>The page was moved during restoration.</li>
+        <li>The archive entry has not been cataloged yet.</li>
+        <li>The URL is incorrect.</li>
+        <li>The file may have been lost during migration.</li>
+
+      </ul>
+
+    </div>
+
+    <a href="index.html" class="home-button">
+
+      Return to Video Game Palace
+
+    </a>
+
+    <div class="small-text">
+
+      Error Code: LVGP-404
+
+    </div>
+
+  </div>
+
+  <!-- archive lookup failed -->
+  <!-- missing registry entry -->
+  <!-- restoration required -->
+
+</body>
+
+</html>

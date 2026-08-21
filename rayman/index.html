@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dream Forest Archive</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #180d16;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.88)),
+        url("./images/dream-forest-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT Scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #ff5db1, #8a2b63);
+      border-bottom: 4px solid #ffd36f;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      color: #fff0f7;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffd36f;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(40,18,32,0.92);
+      border: 2px solid #b44c85;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffd36f;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable Cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(50,22,40,0.95);
+      border: 2px solid #b44c85;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffd36f;
+      box-shadow: 0 0 20px rgba(255,211,111,0.25);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #dddddd;
+      line-height: 1.5;
+    }
+
+    /* Status */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #2f8a39;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #9a5c14;
+    }
+
+    .restricted {
+      background: #872727;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #703857;
+      padding-top: 20px;
+      color: #c6a7b9;
+      font-size: 12px;
+    }
+
+    /* Hidden Lums */
+
+    .hidden-lum {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #442235;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-lum:hover {
+      color: #ffd36f;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>✨ Dream Forest Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Dream Forest Archive</h2>
+
+      <p>
+        The Dream Forest Archive preserves the history of Rayman games,
+        collectibles, promotional material, prototypes,
+        animation history, and hidden discoveries.
+      </p>
+
+      <p>
+        Several magical sectors remain unstable.
+      </p>
+
+    </section>
+
+    <!-- Archive Sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="game_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore Rayman history,
+            regional releases,
+            gameplay mechanics,
+            and preserved game media.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse merchandise,
+            promotional items,
+            prototypes,
+            and rare collectibles.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Fairy Council -->
+
+      <a href="fairy_council.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🧚</div>
+
+          <h3>Fairy Council</h3>
+
+          <p>
+            Research magical artifacts,
+            fairy lore,
+            hidden powers,
+            and prototype concepts.
+          </p>
+
+          <div class="status warning">
+            MAGIC DISTORTION DETECTED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Music Archive -->
+
+      <a href="music_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎵</div>
+
+          <h3>Music Archive</h3>
+
+          <p>
+            Explore soundtrack history,
+            unused audio,
+            prototype tracks,
+            and musical development.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved box art,
+            manuals,
+            promotional illustrations,
+            and magazine scans.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="dream_sector.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Dream Sector</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- lum network partially unstable -->
+  <!-- fairy transmission interrupted -->
+  <!-- dream sector signal detected -->
+
+  <a class="hidden-lum" href="dream_sector.html">
+    ✨
+  </a>
+
+</body>
+
+</html>
