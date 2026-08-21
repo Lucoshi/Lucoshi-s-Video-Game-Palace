@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kongo Bongo Archipelago</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #18140a;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.88)),
+        url("./images/kong-island-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT Scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #d6a500, #7a5b00);
+      border-bottom: 4px solid #ffea75;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      color: #fff7c7;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffea75;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(38,30,12,0.92);
+      border: 2px solid #a88410;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffea75;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable Cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(44,34,14,0.95);
+      border: 2px solid #a88410;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffea75;
+      box-shadow: 0 0 20px rgba(255,234,117,0.25);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #dddddd;
+      line-height: 1.5;
+    }
+
+    /* Status */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #318a3a;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #9a7315;
+    }
+
+    .restricted {
+      background: #872727;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #6d5410;
+      padding-top: 20px;
+      color: #b39a58;
+      font-size: 12px;
+    }
+
+    /* Hidden Banana */
+
+    .hidden-banana {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #3a2d0d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-banana:hover {
+      color: #ffea75;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1><img src="./smash-bros/symbol2.png" alt="Series Symbol" width="100" height="100"><h1>Kong Island Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Kong Island Archive</h2>
+
+      <p>
+        The Kong Island Archive preserves the history of Donkey Kong games,
+        collectibles, promotional material, prototypes,
+        soundtrack history, and hidden discoveries.
+      </p>
+
+      <p>
+        Several jungle sectors remain partially mapped.
+      </p>
+
+    </section>
+
+    <!-- Archive Sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="games.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore Donkey Kong history,
+            regional releases,
+            gameplay mechanics,
+            and preserved game media.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse cartridges,
+            toys,
+            promotional items,
+            and rare collectibles.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Meet the Characters -->
+
+      <a href="characters.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Characters</h3>
+
+          <p>
+            Meet The Characters.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved promotional artwork,
+            manuals, magazine scans, renders, and illustrations.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Music Archive -->
+
+      <a href="music_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎵</div>
+
+          <h3>Music Archive</h3>
+
+          <p>
+            Explore soundtrack history,
+            unused tracks,
+            ambient themes,
+            and development audio.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Comic & Animation Archive -->
+
+      <a href="media_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📚</div>
+
+          <h3>Media Archive</h3>
+
+          <p>
+            Preserved comics, cartoons,
+            anime material, manuals,
+            and historical publications.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Event Exhibits -->
+
+      <a href="event_exhibits.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎡</div>
+
+          <h3>Event Exhibits</h3>
+
+          <p>
+            Documentation of Nintendo events,
+            kiosks, Space World showcases,
+            and promotional experiences.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Banana Hoard -->
+
+      <a href="banana_hoard.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🍌</div>
+
+          <h3>Banana Hoard</h3>
+
+          <p>
+            Research collectibles,
+            hidden bananas,
+            bonus rooms,
+            and lost treasure records.
+          </p>
+
+          <div class="status warning">
+            INVENTORY INCOMPLETE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Kremling Research -->
+
+      <a href="kremling_research.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🐊</div>
+
+          <h3>Kremling Research</h3>
+
+          <p>
+            Document enemy history,
+            Kremling hierarchy,
+            pirate records,
+            and prototype concepts.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="lost_world_sector.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Lost World Sector</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- banana stockpile mismatch -->
+  <!-- jungle transit routes incomplete -->
+  <!-- hidden temple records detected -->
+
+  <a class="hidden-banana" href="lost_world_sector.html">
+    🍌
+  </a>
+
+</body>
+
+</html>
