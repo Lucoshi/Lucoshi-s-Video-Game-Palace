@@ -1,94 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Gaming Land</title>
-    <link rel="stylesheet" href="frontpage/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select a Level</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1a1a2e;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Press Start 2P'
+    }
+
+    /* Grid System */
+    .index-map {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px;
+      padding: 40px;
+      width: 90vw;
+      max-width: 1100px;
+      background-color: #12131a;
+      border: 3px solid #2a2d3d;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Leves' Nodes */
+    .world-node {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .world-node a {
+      text-decoration: none;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .world-node img {
+      width: auto;
+      height: auto;
+      image-rendering: pixelated;
+      transition: transform 0.15s ease, filter 0.2s ease;
+    }
+
+    /* Efeitos Neon das Cores */
+    .levelred img { filter: drop-shadow(0 0 8px #ff4d4d); }
+    .levelblue img { filter: drop-shadow(0 0 8px #60a5fa); }
+    .levelgreen img { filter: drop-shadow(0 0 8px #4ade80); }
+    .levelyellow img { filter: drop-shadow(0 0 8px #facc15); }
+    .levelorange img { filter: drop-shadow(0 0 8px #fb923c); }
+    .levelbrown img { filter: drop-shadow(0 0 8px #d97706); }
+    .levelpink img { filter: drop-shadow(0 0 8px #f472b6); }
+    .levelpurple img { filter: drop-shadow(0 0 8px #c084fc); }
+
+    /* Animação Tilt + Brilho no Hover */
+    @keyframes tiltAnimation {
+      0% { transform: scale(1.2) rotate(0deg); }
+      25% { transform: scale(1.2) rotate(-6deg); }
+      75% { transform: scale(1.2) rotate(6deg); }
+      100% { transform: scale(1.2) rotate(0deg); }
+    }
+
+    .world-node:hover img {
+      animation: tiltAnimation 0.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.9));
+    }
+
+    /* HUD */
+    .progress-data {
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #ffffff;
+      padding: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 100;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .world-node:hover .progress-data {
+      opacity: 1;
+    }
+
+    .percentage-text {
+      color: #ffffff;
+      font-size: 11px;
+      margin-bottom: 6px;
+      display: block;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #000000;
+      border: 1px solid #ffffff;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #ffd700;
+    }
+  </style>
 </head>
 <body>
 
-<main class="index-map">
-    <div class="world-node">
-        <a href="mario/index.html">
-            <img src="frontpage/mushroom_kingdom.png" alt="Mushroom Kingdom">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+  <div class="index-map">
+
+    <!-- 1: Mushroom Kingdom -->
+    <div class="world-node levelred">
+      <a href="mario/index.html" onclick="marioAlarm()">
+        <img src="frontpage/mushroom_kingdom.png" alt="Mushroom Kingdom">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="sonic/index.html">
-            <img src="frontpage/mobius.png" alt="Mobius">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 2: Mobius -->
+    <div class="world-node levelblue">
+      <a href="sonic/index.html" onclick="sonicAlarm()">
+        <img src="frontpage/mobius.png" alt="Mobius">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="zelda/index.html">
-            <img src="frontpage/hyrule.png" alt="Hyrule">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 3: Hyrule -->
+    <div class="world-node levelgreen">
+      <a href="zelda/index.html" onclick="zeldaAlarm()">
+        <img src="frontpage/hyrule.png" alt="Hyrule">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="donkey-kong/index.html">
-            <img src="frontpage/kongo_archipelago.png" alt="Kongo Archipelago">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 4. Kongo Bongo -->
+    <div class="world-node levelyellow">
+      <a href="donkey-kong/index.html" onclick="donkeykongAlarm()">
+        <img src="frontpage/kongo_archipelago.png" alt="Kongo Bongo Archipelago">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="crash/index.html">
-            <img src="frontpage/wumpa_isles.png" alt="Wumpa Isles">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 5. Laranja: Wumpa Isles -->
+    <div class="world-node levelorange">
+      <a href="crash/index.html" onclick="crashAlarm()">
+        <img src="frontpage/wumpa_isles.png" alt="Wumpa Isles">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="banjo/index.html">
-            <img src="frontpage/isle_o_hags.png" alt="Isle o' Hags">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 6: Isle O Hags -->
+    <div class="world-node levelbrown">
+      <a href="banjo/index.html" onclick="banjoAlarm()">
+        <img src="frontpage/isle_o_hags.png" alt="Isle O Hags">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="rayman/index.html">
-            <img src="frontpage/glade_of_dreams.png" alt="Glade of Dreams">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 7: Glade of Dreams -->
+    <div class="world-node levelpink">
+      <a href="rayman/index.html" onclick="raymanAlarm()">
+        <img src="frontpage/glade_of_dreams.png" alt="Glade of Dreams">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="world-node">
-        <a href="wario/index.html">
-            <img src="frontpage/wario_land.png" alt="Wario Land">
-            <div class="progress-data">
-                <div class="percentage-text">0%</div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-        </a>
+    <!-- 8: Wario Land -->
+    <div class="world-node levelpurple">
+      <a href="wario/index.html" onclick="warioAlarm()">
+        <img src="frontpage/wario_land.png" alt="Wario Land">
+        <div class="progress-data">
+          <span class="percentage-text">PROGRESS: 0%</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </a>
     </div>
-</main>
+   </div>
+  
 
+  <script>
+
+    function marioAlarm() {
+
+      alert(
+        "LUIGI: U-Um... hello?\n\n" +
+
+        "Welcome to the Mushroom Kingdom archive!\n\n" +
+
+        "There are lots of old adventures here... " +
+        "Please take your time, look around, " +
+        "and help preserve them!\n\n" +
+
+        "A-And if you find anything scary, " +
+        "just remember... I wasn't the one who sent you!"
+      );
+    }
+
+    function sonicAlarm() {
+
+      alert(
+        "KNUCKLES: Hey. You made it to the Mobius archive.\n\n" +
+
+        "I've seen what happens when people forget " +
+        "where things came from.\n\n" +
+
+        "Don't let that happen here. " +
+        "Dig through the records, learn the history, " +
+        "and preserve what you find.\n\n" +
+
+        "...And don't touch my Master Emerald."
+      );
+    }
+    function zeldaAlarm() {
+
+      alert(
+        "MIDNA: Well, well... look who wandered into Hyrule.\n\n" +
+
+        "There's plenty of history hiding around here, " +
+        "so you'd better take a good look.\n\n" +
+
+        "Explore the records, uncover forgotten adventures, " +
+        "and make sure these memories don't disappear.\n\n" +
+
+        "And don't get yourself cursed while you're at it."
+      );
+    }
+
+    function donkeykongAlarm() {
+
+      alert(
+        "CRANKY KONG: Hmph! So you've finally decided " +
+        "to look through the archives!\n\n" +
+
+        "Back in MY day, we didn't have fancy websites " +
+        "preserving everything for us!\n\n" +
+
+        "We had to remember our games ourselves!\n\n" +
+
+        "Now quit standing around and go preserve some history!"
+      );
+    }
+
+    function crashAlarm() {
+
+      alert(
+        "N. BRIO: Ah! Another curious visitor!\n\n" +
+
+        "You have entered the Wumpa Isles archive!\n\n" +
+
+        "Within these records lie fascinating specimens " +
+        "of gaming history... characters, worlds, inventions... " +
+        "all waiting to be examined!\n\n" +
+
+        "Do not allow these precious records to decay!\n\n" +
+
+        "PRESERVE THEM!\n\n" +
+
+        "...And whatever you do, do NOT touch the green bottles."
+      );
+    }
+
+    function banjoAlarm() {
+
+      alert(
+        "KAZOOIE: Well, look who wandered into the Isle O' Hags.\n\n" +
+
+        "Don't worry, we're not going to make you collect " +
+        "a hundred bloody things just to open a door.\n\n" +
+
+        "This is an archive, so have a look around " +
+        "and preserve some history while you're here.\n\n" +
+
+        "And if Gruntilda shows up, I'm blaming you."
+      );
+    }
+
+    function raymanAlarm() {
+
+      alert(
+        "MURPHY: Oh! Hi there!\n\n" +
+
+        "You're looking through the Glade's archive, aren't you?\n\n" +
+
+        "Good! There's plenty of history hiding around here, " +
+        "and somebody has to make sure it doesn't disappear!\n\n" +
+
+        "So go on, have a look around!\n\n" +
+
+        "I'll be right here... probably bothering the next person who visits."
+      );
+    }
+
+
+    function warioAlarm() {
+
+      alert(
+        "WARIO: WAHAHAHA! YOU FOUND MY ARCHIVE!\n\n" +
+
+        "Everything in here is valuable!\n\n" +
+
+        "Games! Characters! History! MEMORIES!\n\n" +
+
+        "You'd better preserve every last bit of it!\n\n" +
+
+        "Why? Because forgotten games are worthless...\n\n" +
+
+        "BUT PRESERVED GAMES ARE TREASURE!\n\n" +
+
+        "Now go explore!\n\n" +
+
+        "And don't steal anything from WARIO!"
+      );
+    }
+  </script>
 </body>
 </html>
