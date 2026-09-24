@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mobius Archive</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #000090;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+        url("./images/mobius-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #0066d6, #00007d);
+      border-bottom: 4px solid #ffd000;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffd000;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(15,20,28,0.92);
+      border: 2px solid #24425c;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffd000;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #cccccc;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(18,26,36,0.94);
+      border: 2px solid #24425c;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffd000;
+      box-shadow: 0 0 20px rgba(255,208,0,0.2);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #cccccc;
+      line-height: 1.5;
+    }
+
+    /* Status tags */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #007a2f;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #7a6200;
+    }
+
+    .restricted {
+      background: #7a1f1f;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #1f2f42;
+      padding-top: 20px;
+      color: #666;
+      font-size: 12px;
+    }
+
+    /* Hidden ring */
+
+    .hidden-ring {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-ring:hover {
+      color: #777;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>💨 Mobius Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Mobius Archive</h2>
+
+      <p>
+        The Mobius Archive preserves the history of Sonic-related media,
+        collectibles, prototypes, promotional material,
+        comics, animation, and fan discoveries.
+      </p>
+
+      <p>
+        Data synchronization remains incomplete.
+      </p>
+
+    </section>
+
+    <!-- Archive sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="game_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore release history, regional differences,
+            development material, and preserved Sonic game media.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse toys, action figures,
+            promotional items, game bundles,
+            and rare Sonic collectibles.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Prototype Lab -->
+
+      <a href="prototype_lab.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🧪</div>
+
+          <h3>Prototype Recovery Lab</h3>
+
+          <p>
+            Research beta builds, unused assets,
+            hidden levels, early concepts,
+            and recovered development material.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- Comic & Animation Archive -->
+
+      <a href="media_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📚</div>
+
+          <h3>Media Archive</h3>
+
+          <p>
+            Preserved comics, cartoons,
+            anime material, manuals,
+            and historical publications.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Event Exhibits -->
+
+      <a href="event_exhibits.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎡</div>
+
+          <h3>Event Exhibits</h3>
+
+          <p>
+            Documentation of trade shows,
+            promotional tours, kiosks,
+            and Sonic anniversary events.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+           <!-- Comic & Animation Archive -->
+
+      <a href="media_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📚</div>
+
+          <h3>Fangames Archive</h3>
+
+          <p>
+            Preserved comics, cartoons,
+            anime material, manuals,
+            and historical publications.
+          </p>
+
+          <div class="status restricted">
+            UNMADE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="sector_e_gamma.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Sector E-102</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last synchronization update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- synchronization interrupted -->
+  <!-- mirror server still active -->
+  <!-- phantom data detected -->
+
+  <a class="hidden-ring" href="sector_e_gamma.html">
+    ⭕
+  </a>
+
+</body>
+
+</html>
