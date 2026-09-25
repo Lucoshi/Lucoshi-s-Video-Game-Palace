@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Isle o Hags</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #15110c;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.88)),
+        url("./images/isle-o-hags-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* Scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #6b3e1f, #3d2413);
+      border-bottom: 4px solid #d8a24c;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffd000;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(22,18,14,0.92);
+      border: 2px solid #4a3b28;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffd000;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #d8a24c;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(36,26,18,0.95);
+      border: 2px solid #5a3a22;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #d8a24c;
+      box-shadow: 0 0 20px rgba(216,162,76,0.25);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #d0d0d0;
+      line-height: 1.5;
+    }
+
+    /* Status */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #5b8a32;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #8a6c14;
+    }
+
+    .restricted {
+      background: #7a1f1f;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #4a3120;
+      padding-top: 20px;
+      color: #8a7a68;
+      font-size: 12px;
+    }
+
+    /* Hidden Jiggy */
+
+    .hidden-jiggy {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #221b11;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-jiggy:hover {
+      color: #77623c;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🧩 Isle o Hags</h1>
+
+    <p>
+      Part of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Isle o Hags</h2>
+
+      <p>
+        The Isle o Hags Archive preserves the history of Banjo-Kazooie
+        media, collectibles, prototypes, promotional material,
+        developer history, and fan discoveries.
+      </p>
+
+      <p>
+        Certain records remain partially restored.
+      </p>
+
+    </section>
+
+    <!-- Archive Sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="games.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore release history, regional versions,
+            development notes, and preserved game media.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse figures, plushies,
+            promotional merchandise,
+            bundles, and rare collectibles.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Stop 'N' Swop Lab -->
+
+      <a href="stopnswop_lab.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🥚</div>
+
+          <h3>Stop 'N' Swop Lab</h3>
+
+          <p>
+            Research hidden features,
+            prototype mysteries,
+            unused connections,
+            and recovered secrets.
+          </p>
+
+          <div class="status warning">
+            INVESTIGATION ACTIVE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved renders, manuals,
+            promotional artwork,
+            magazine scans, and concept art.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Music & Voices -->
+
+      <a href="music_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎵</div>
+
+          <h3>Music Archive</h3>
+
+          <p>
+            Explore soundtrack history,
+            voice clips, unused audio,
+            and musical development material.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="cheato_sector.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Cheato Storage Sector</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- stop n swop transfer interrupted -->
+  <!-- storage cartridge checksum mismatch -->
+  <!-- hidden egg data still present -->
+
+  <a class="hidden-jiggy" href="cheato_sector.html">
+    🧩
+  </a>
+
+</body>
+
+</html>
