@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mushroom Kingdom Archive</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #180506;
+      color: #E05A60;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(
+            rgba(80,5,8,0.72),
+            rgba(35,5,8,0.88)
+          ),
+          url("./artwork/3d/misc/mario-cast.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+      }
+
+    /* CRT scanlines */
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          repeating-linear-gradient(
+            to bottom,
+            rgba(255,40,40,0.025),
+            rgba(255,40,40,0.025) 1px,
+            transparent 1px,
+            transparent 3px
+          );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #B51E23, #6E1116);
+      border-bottom: 4px solid #D9363E;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      color: #FFFFFF;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #F0A0A4;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(24,5,6,0.94);
+      border: 2px solid #4A1013;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #D9363E;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #E05A60;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(28,6,8,0.95);
+      border: 2px solid #4A1013;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #D9363E;
+      box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #E05A60;
+      line-height: 1.5;
+    }
+
+    /* Status tags */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #1f7a1f;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #7a6200;
+    }
+
+    .restricted {
+      background: #7a1f1f;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      color: #600;
+      font-size: 12px;
+    }
+
+    /* Hidden star */
+
+    .tiny-star {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #200;
+      text-decoration: none;
+      font-size: 12px;
+      transition: 0.2s;
+    }
+
+    .tiny-star:hover {
+      color: #600;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🍄 Mushroom Kingdom Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Archive</h2>
+
+      <p>
+        The Mushroom Kingdom Archive is an interactive museum and preservation
+        project documenting the history of Mario-related media, collectibles,
+        prototypes, promotional material, and fan discoveries.
+      </p>
+
+      <p>
+        Restoration efforts remain ongoing.
+      </p>
+
+    </section>
+
+    <!-- Archive sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="game_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore historical information, regional releases,
+            development history, and preserved media from Mario games.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse collectible bundles, merchandise,
+            toys, promotional items, and rare releases.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Prototype Lab -->
+
+      <a href="prototype_lab.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🧪</div>
+
+          <h3>Prototype Recovery Lab</h3>
+
+          <p>
+            Research beta content, unused assets,
+            early builds, and recovered development material.
+          </p>
+
+          <div class="status warning">
+            RESTORATION IN PROGRESS
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved promotional artwork,
+            manuals, magazine scans, renders, and illustrations.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Comic & Animation Archive -->
+
+      <a href="media_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📚</div>
+
+          <h3>Media Archive</h3>
+
+          <p>
+            Preserved comics, cartoons,
+            anime material, manuals,
+            and historical publications.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Event Exhibits -->
+
+      <a href="event_exhibits.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎡</div>
+
+          <h3>Event Exhibits</h3>
+
+          <p>
+            Documentation of Nintendo events,
+            kiosks, Space World showcases,
+            and promotional experiences.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted sector -->
+
+      <a href="restoration_sector_3.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Restoration Sector 3</h3>
+
+          <p>
+            Access currently unavailable.
+          </p>
+
+          <div class="status restricted">
+            RESTRICTED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- recovery process halted -->
+  <!-- archive mirror node unavailable -->
+  <!-- restoration sector still responding -->
+
+  <a class="tiny-star" href="restoration_sector_3.html">
+    ★
+  </a>
+
+</body>
+
+</html>
