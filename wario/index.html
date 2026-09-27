@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wario Land</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #140c18;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.88)),
+        url("./images/treasure-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #6a1fa3, #38105c);
+      border-bottom: 4px solid #ffd000;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffd000;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(30,18,42,0.92);
+      border: 2px solid #5d2b87;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffd000;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #d5d5d5;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(36,22,50,0.95);
+      border: 2px solid #5d2b87;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffd000;
+      box-shadow: 0 0 20px rgba(255,208,0,0.25);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #d5d5d5;
+      line-height: 1.5;
+    }
+
+    /* Status */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #2f8a39;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #987318;
+    }
+
+    .restricted {
+      background: #872626;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #4b2468;
+      padding-top: 20px;
+      color: #8f7ca4;
+      font-size: 12px;
+    }
+
+    /* Hidden Coin */
+
+    .hidden-coin {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #24152f;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-coin:hover {
+      color: #9c82b7;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>💎 Wario Land</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Wario Land</h2>
+
+      <p>
+        The Wario Land preserves the history of Wario games,
+        collectibles, promotional material, prototypes,
+        regional releases, and hidden discoveries.
+      </p>
+
+      <p>
+        Several treasure sectors remain under investigation.
+      </p>
+
+    </section>
+
+    <!-- Archive Sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="game_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore Wario history,
+            regional versions,
+            gameplay mechanics,
+            and preserved game media.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse cartridges,
+            merchandise,
+            promotional items,
+            and rare collectibles.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Treasure Vault -->
+
+      <a href="treasure_vault.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">💰</div>
+
+          <h3>Treasure Vault</h3>
+
+          <p>
+            Research hidden treasures,
+            secret exits,
+            collectible systems,
+            and unlockable rewards.
+          </p>
+
+          <div class="status warning">
+            INVENTORY INCOMPLETE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Transformation Lab -->
+
+      <a href="transformation_lab.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🧪</div>
+
+          <h3>Transformation Lab</h3>
+
+          <p>
+            Document transformations,
+            enemy effects,
+            prototype mechanics,
+            and unused abilities.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved box art,
+            manuals,
+            promotional illustrations,
+            and magazine scans.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="black_sugar_sector.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Black Sugar Sector</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- treasure inventory mismatch -->
+  <!-- pyramid archive partially restored -->
+  <!-- hidden coin registry still active -->
+
+  <a class="hidden-coin" href="black_sugar_sector.html">
+    🪙
+  </a>
+
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wumpa Island Archive</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #1a1208;
+      color: white;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.88)),
+        url("./images/wumpa-island-background.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* CRT Scanlines */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(to bottom, #ff7b00, #8a3f00);
+      border-bottom: 4px solid #ffd36b;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      color: #fff1d1;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ffd36b;
+      font-size: 15px;
+    }
+
+    /* Main */
+
+    .main-container {
+      padding: 40px;
+    }
+
+    /* Intro */
+
+    .intro-box {
+      background: rgba(42,24,10,0.92);
+      border: 2px solid #c46000;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 35px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: #ffd36b;
+    }
+
+    .intro-box p {
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    /* Grid */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Clickable Cards */
+
+    .archive-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .archive-card {
+      background: rgba(50,28,12,0.95);
+      border: 2px solid #c46000;
+      border-radius: 18px;
+      padding: 20px;
+      transition: 0.2s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      min-height: 230px;
+      overflow: hidden;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffd36b;
+      box-shadow: 0 0 20px rgba(255,211,107,0.25);
+    }
+
+    .archive-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .archive-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .archive-card p {
+      color: #dddddd;
+      line-height: 1.5;
+    }
+
+    /* Status */
+
+    .status {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #2f8a39;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .warning {
+      background: #9a5c14;
+    }
+
+    .restricted {
+      background: #872727;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #7a4200;
+      padding-top: 20px;
+      color: #c49b72;
+      font-size: 12px;
+    }
+
+    /* Hidden Wumpa */
+
+    .hidden-wumpa {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      color: #442100;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hidden-wumpa:hover {
+      color: #ffd36b;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🍎 Wumpa Island Archive</h1>
+
+    <p>
+      A division of Lucoshi's Video Game Palace
+    </p>
+
+  </header>
+
+  <main class="main-container">
+
+    <!-- Intro -->
+
+    <section class="intro-box">
+
+      <h2>Welcome to the Wumpa Island Archive</h2>
+
+      <p>
+        The Wumpa Island Archive preserves the history of Crash Bandicoot games,
+        collectibles, prototypes, promotional material,
+        animation history, and hidden discoveries.
+      </p>
+
+      <p>
+        Warp room synchronization remains unstable.
+      </p>
+
+    </section>
+
+    <!-- Archive Sections -->
+
+    <section class="archive-grid">
+
+      <!-- Game Archive -->
+
+      <a href="game_archive.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🎮</div>
+
+          <h3>Game Archive</h3>
+
+          <p>
+            Explore Crash Bandicoot history,
+            regional releases,
+            gameplay mechanics,
+            and preserved game media.
+          </p>
+
+          <div class="status">
+            FULLY ACCESSIBLE
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Collector Checklist -->
+
+      <a href="collector_checklist.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">📦</div>
+
+          <h3>Collector Checklist</h3>
+
+          <p>
+            Browse figures,
+            promotional items,
+            merchandise,
+            and rare collectibles.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Warp Room -->
+
+      <a href="warp_room.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🌀</div>
+
+          <h3>Warp Room</h3>
+
+          <p>
+            Research hidden exits,
+            time trial systems,
+            secret levels,
+            and dimensional anomalies.
+          </p>
+
+          <div class="status warning">
+            PORTAL INSTABILITY DETECTED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Cortex Files -->
+
+      <a href="cortex_files.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🧪</div>
+
+          <h3>Cortex Files</h3>
+
+          <p>
+            Document experiments,
+            mutant research,
+            villain history,
+            and prototype concepts.
+          </p>
+
+          <div class="status">
+            ARCHIVED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Artwork Gallery -->
+
+      <a href="artwork_gallery.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🖼️</div>
+
+          <h3>Artwork Gallery</h3>
+
+          <p>
+            Preserved box art,
+            manuals,
+            promotional renders,
+            and magazine scans.
+          </p>
+
+          <div class="status">
+            UPDATED
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Restricted -->
+
+      <a href="island_x_sector.html" class="archive-link">
+
+        <div class="archive-card">
+
+          <div class="archive-icon">🔒</div>
+
+          <h3>Island X Sector</h3>
+
+          <p>
+            Access currently restricted.
+          </p>
+
+          <div class="status restricted">
+            LOCKED
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <footer>
+
+      Lucoshi's Video Game Palace Archive Network<br>
+      Last restoration update: 05/21/2026
+
+    </footer>
+
+  </main>
+
+  <!-- dimensional route mismatch -->
+  <!-- cortex archive partially restored -->
+  <!-- hidden warp room signature detected -->
+
+  <a class="hidden-wumpa" href="island_x_sector.html">
+    🍎
+  </a>
