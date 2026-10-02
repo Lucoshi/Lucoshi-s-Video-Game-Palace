@@ -1,0 +1,300 @@
+<HTML>
+<HEAD>
+   <TITLE>table</TITLE>
+<meta name="ROBOTS" content="NOINDEX, FOLLOW">
+
+<script language="JavaScript">
+// <!--
+
+
+
+function changeURL  ()
+	{
+	if (bType == "n4")	top.window.location = '../net4/acc3.html'
+	else alert('Pour accéder à cette version,\nvous devez posséder Netscape4')}
+
+var bType;
+bName = navigator.appName; 
+bVer  = parseInt(navigator.appVersion); 
+    if      (bName == "Netscape" && bVer >= 4) bType = "n4"; 
+    else  if (bName == "Netscape" && bVer == 3) bType = "n3"; 
+    else if (bName == "Microsoft Internet Explorer" && bVer <= 3 ) bType = "e3";
+    else if (bName == "Microsoft Internet Explorer" && bVer >3 ) bType = "n3"; 
+
+//alert ('navigateur='+bName+' '+bVer)
+
+if (bType=="n3")
+{
+	var mapimg = new Array();
+ 	mapimg[0] = new Image (350, 87);
+	mapimg[0].src = "images/t1.jpg";
+
+ 	mapimg[1] = new Image (350, 13);
+	mapimg[1].src = "images/t2a.jpg";
+	
+ 	mapimg[2] = new Image (350, 13);
+	mapimg[2].src = "images/t2b.jpg";
+
+ 	mapimg[3] = new Image (350, 10);
+	mapimg[3].src = "images/t3.jpg";
+
+ 	mapimg[4] = new Image (350, 13);
+	mapimg[4].src = "images/t4a.jpg";
+
+ 	mapimg[5] = new Image (350, 13);
+	mapimg[5].src = "images/t4b.jpg";
+
+ 	mapimg[6] = new Image (350, 29);
+	mapimg[6].src = "images/t5.jpg";
+
+ 	mapimg[7] = new Image (350, 14);
+	mapimg[7].src = "images/t6a.jpg";
+
+ 	mapimg[8] = new Image (350, 14);
+	mapimg[8].src = "images/t6b.jpg";
+
+ 	mapimg[9] = new Image (350, 40);
+	mapimg[9].src = "images/t7.jpg";
+
+ 	mapimg[10] = new Image (350, 14);
+	mapimg[10].src = "images/t8a.jpg";
+
+ 	mapimg[11] = new Image (350, 14);
+	mapimg[11].src = "images/t8b.jpg";
+
+ 	mapimg[12] = new Image (350, 29);
+	mapimg[12].src = "images/t9.jpg";
+
+ 	mapimg[13] = new Image (350, 14);
+	mapimg[13].src = "images/t10a.jpg";
+
+ 	mapimg[14] = new Image (350, 14);
+	mapimg[14].src = "images/t10b.jpg";
+
+ 	mapimg[15] = new Image (350, 15);
+	mapimg[15].src = "images/t11a.jpg";
+
+ 	mapimg[16] = new Image (350, 15);
+	mapimg[16].src = "images/t11b.jpg";
+
+ 	mapimg[17] = new Image (350, 32);
+	mapimg[17].src = "images/t12.jpg";
+
+	mapimg[18] = new Image (25, 17);
+	mapimg[18].src = "images/vide.gif";
+
+	mapimg[19] = new Image (25, 17);
+	mapimg[19].src = "images/bec.gif";
+
+	mapimg[20] = new Image (19, 13);
+	mapimg[20].src = "images/main.gif";
+
+	mapimg[21] = new Image (19, 13);
+	mapimg[21].src = "images/main2.gif";
+
+}
+
+function remplace (img, n)
+{
+	if (bType=="n3")
+	{
+		if (img==1)
+		{document.imt2.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Gold":"";
+		return true;}
+		if (img==4)
+		{document.imt4.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Langues":"";
+		return true;}
+		if (img==7)
+		{document.imt6.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Junior":"";
+		return true;}
+		if (img==10)
+		{document.imt8.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Designer":"";
+		return true;}
+		if (img==13)
+		{document.imt10.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Eveil":"";
+		return true;}
+		if (img==15)
+		{document.imt11.src=mapimg[img+n].src;
+		window.status = n ? "Rayman Consoles":"";
+		return true;}
+	}
+return false;
+}
+// -->
+</script>
+
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#FFFFC9" LINK="#FFE200" VLINK="#D2FFDD" ALINK="#B6E2FF">
+
+<TABLE BORDER=0 cellpadding=0 cellspacing=0 WIDTH="350" align="left">
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t1.jpg" NOSAVE HEIGHT=87 WIDTH=350></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t2a.jpg" USEMAP="#t2" NAME="imt2" WIDTH=350 NOSAVE HEIGHT=13 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t3.jpg" WIDTH=350 NOSAVE HEIGHT=10 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t4a.jpg" USEMAP="#t4" NAME="imt4" WIDTH=350 NOSAVE HEIGHT=13 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t5.jpg" USEMAP="#t5" WIDTH=350 NOSAVE HEIGHT=29 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t6a.jpg" USEMAP="#t6" NAME="imt6" WIDTH=350 NOSAVE HEIGHT=14 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t7.jpg" USEMAP="#t7" WIDTH=350 NOSAVE HEIGHT=40 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t8a.jpg" USEMAP="#t8" NAME="imt8" WIDTH=350 NOSAVE HEIGHT=14 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=CENTER WIDTH="350">
+<IMG SRC="images/t9.jpg" USEMAP="#t9" WIDTH=350 NOSAVE HEIGHT=29 BORDER=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=center WIDTH="350">
+<IMG SRC="images/t10a.jpg" usemap="#t10" name="imt10" HEIGHT=14 WIDTH=350 border=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=center WIDTH="350">
+<IMG SRC="images/t11a.jpg" usemap="#t11" name="imt11" HEIGHT=15 WIDTH=350 border=0></TD>
+</TR>
+
+<TR>
+<TD VALIGN=center WIDTH="350">
+<IMG SRC="images/t12.jpg" usemap="#t12" HEIGHT=32 WIDTH=350 border=0></TD>
+</TR>
+
+<tr>
+<MAP NAME="t2">
+<AREA SHAPE=RECT COORDS="150,0,197,13" HREF="../gold/gold.html" target="desc"
+ onMouseOver="if (remplace(1, 1)) return true;"
+ onMouseOut="if (remplace(1, 0)) return true;">
+
+<AREA SHAPE=CIRCLE COORDS="254,7,15" HREF="../langues/langues.html" target="desc"
+ onMouseOver="if (remplace(4, 1)) return true;"
+ onMouseOut="if (remplace(4, 0)) return true;">
+
+
+</MAP>
+
+<MAP NAME="t4">
+<AREA SHAPE=RECT COORDS="211,0,288,13" HREF="../langues/langues.html" target="desc" 
+ onMouseOver="if (remplace(4, 1)) return true;"
+ onMouseOut="if (remplace(4, 0)) return true;">
+<AREA SHAPE=CIRCLE COORDS="180,7,15" HREF="../gold/gold.html" target="desc" 
+ onMouseOver="if (remplace(1, 1)) return true;"
+ onMouseOut="if (remplace(1, 0)) return true;">
+</MAP>
+
+<MAP NAME="t5">
+<AREA SHAPE=CIRCLE COORDS="119,18,15" HREF="../juniors/junior.html" target="desc"
+ onMouseOver="if (remplace(7, 1)) return true;"
+ onMouseOut="if (remplace(7, 0)) return true;">
+</MAP>
+
+<MAP NAME="t6">
+<AREA SHAPE=RECT COORDS="67,1,140,14" HREF="../juniors/junior.html" target="desc"
+ onMouseOver="if (remplace(7, 1)) return true;"
+ onMouseOut="if (remplace(7, 0)) return true;">
+</MAP>
+
+<MAP NAME="t7">
+<AREA SHAPE=CIRCLE COORDS="309,28,16" HREF="../designer/designer.html" target="desc"
+ onMouseOver="if (remplace(10, 1)) return true;"
+ onMouseOut="if (remplace(10, 0)) return true;">
+
+</MAP>
+
+
+
+<MAP NAME="t8">
+<AREA SHAPE=RECT COORDS="248,0,340,14" HREF="../designer/designer.html" target="desc"
+ onMouseOver="if (remplace(10, 1)) return true;"
+ onMouseOut="if (remplace(10, 0)) return true;">
+</MAP>
+
+<MAP NAME="t9">
+<AREA SHAPE=CIRCLE COORDS="100,12,15" HREF="../eveil/eveil.html" target="desc" 
+ onMouseOver="if (remplace(13, 1)) return true;"
+ onMouseOut="if (remplace(13, 0)) return true;">
+</MAP>
+
+<MAP NAME="t10">
+<AREA SHAPE=RECT COORDS="71,0,124,14" HREF="../eveil/eveil.html" target="desc"
+  onMouseOver="if (remplace(13, 1)) return true;"
+ onMouseOut="if (remplace(13, 0)) return true;">
+<AREA SHAPE=CIRCLE COORDS="259,9,11" HREF="../consoles/consoles.html" target="desc" 
+  onMouseOver="if (remplace(15, 1)) return true;"
+ onMouseOut="if (remplace(15, 0)) return true;">
+</MAP>
+
+<MAP NAME="t11">
+<AREA SHAPE=RECT COORDS="207,2,289,15" HREF="../consoles/consoles.html" target="desc"
+ onMouseOver="if (remplace(15, 1)) return true;"
+ onMouseOut="if (remplace(15, 0)) return true;">
+</MAP>
+
+<map name="t12">
+<AREA SHAPE=RECT COORDS="0,0,56,21" HREF="http://www.ubisoft.fr" TARGET="_top" ALT="Le site Ubi Soft" onMouseOver="window.status='Retourner vers le site Ubi Soft'; return true" onMouseOut="window.status=''; return true">
+</MAP>
+
+
+<td align=center>
+<P>
+<BR>
+<table border=0 cellpadding=0 cellspacing=0 width=84>
+<tr>
+<td width=84 colspan=3 align=center>
+<img src="images/tray.gif" border=0 width=23 height=26></td></tr>
+<tr><td width=21 align=right><img name="main1" src="images/main2.gif" width=19 height=13></td>
+<td width=42 align=center>
+<font face="comic sans ms" size=-2><nobr>[<a href="../accueil/accueil.html" target="desc" onMouseOver="window.status='Retourner à l\'acueil'; return true" onMouseOut="window.status=''; return true">Accueil</a>]</nobr></font>
+</td>
+<td width=21 align=left><img name="main2" src="images/main.gif" width=19 height=13></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td colspan=3>
+<CENTER>
+<P>
+<BR>
+<FONT SIZE=1>Si vous possédez Netscape 4 (Comunicator)<BR>
+<A HREF="javascript:changeURL()">cliquez-ici</A> pour une version améliorée de cette page.</FONT>
+
+</CENTER>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>
+      
