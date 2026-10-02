@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<meta name="ROBOTS" content="NOINDEX, FOLLOW">
+
+<HTML>
+<HEAD>
+<TITLE>Rayman Eveil - Navigation</TITLE>
+<META NAME="Author" CONTENT="UBI SOFT - EP.">
+<META NAME="Description" CONTENT="Ubi Soft Entertainement présente RAYMAN EVEIL, un CD-Rom de découverte pour les tous 
+petits.">
+
+<script language="JavaScript">
+<!--
+agent = navigator.userAgent
+browserVer = 2
+if (agent.indexOf("a/3",6) != -1)
+    {browserVer = 1}
+else
+    {if (agent.indexOf("a/4",6) != -1)
+        browserVer = 1}
+
+if (browserVer == 1) {
+
+dot = new Image();
+dot.src = "images/etoile2.gif";
+
+montre01 = new Image();
+montre01.src = "images/ray-montre/montre01.gif";
+
+montre02 = new Image();
+montre02.src = "images/ray-montre/montre02.gif";
+
+montre03 = new Image();
+montre03.src = "images/ray-montre/montre03.gif";
+
+montre04 = new Image();
+montre04.src = "images/ray-montre/montre04.gif";
+
+}
+
+function Survol(imgDocID,imgObjName) {
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src")
+                        }
+}
+
+function Fenetre (url) {
+        this.url=url;
+        explication=window.open (url,'RaymanEveil','scrollbars=yes,menubar=no,status=no,resizable=yes,width=200,height=200');
+        if (navigator.appVersion.substring(1,0)=="3")
+        {
+        explication.focus();   
+        }
+}
+// -->
+</script>
+
+
+
+</HEAD>
+<BODY BACKGROUND="../images/fond.gif" BGCOLOR="#BDBDFF" TEXT="#000000" LINK="#800040" VLINK="#000000" ALINK="#FF0000">
+
+
+<table height="100%">
+  <TR>
+    <TD width="90">
+<CENTER><A HREF="../activites/activites.html" onMouseOver="Survol('RAY1','montre01');window.status='Découvre les nombreuses activités proposées par Rayman Eveil'; return true" onMouseOut="Survol('RAY1','dot');window.status=''; return true" target="texte"><IMG SRC="images/activite.gif" BORDER=0 WIDTH=70 HEIGHT=63><BR><FONT FACE="Comic Sans MS" SIZE=1>[LES ACTIVITES]</FONT></a></CENTER>
+</TD>
+   <TD><CENTER><IMG SRC="images/etoile2.gif" BORDER=0 WIDTH=60 HEIGHT=72 name="RAY1"></CENTER></TD>
+  </TR>
+
+  <TR>
+    <TD><CENTER><IMG SRC="images/etoile2.gif" BORDER=0 WIDTH=60 HEIGHT=72 name="RAY2"></CENTER></TD>
+    <TD width="90">
+<CENTER><A HREF="../heros/heros.html" onMouseOver="Survol('RAY2','montre02');window.status='Découvre les personnages qui vont t\'accompagner'; return true" onMouseOut="Survol('RAY2','dot');window.status=''; return true" target="texte"><IMG SRC="images/persos.gif" BORDER=0 WIDTH=68 HEIGHT=56><BR><FONT FACE="Comic Sans MS" SIZE=1>[LES HEROS]</FONT></a></CENTER>
+</TD>
+  </TR>
+
+  <TR>
+    <TD width="90">
+<CENTER><A HREF="../jeu/jeu.html" onMouseOver="Survol('RAY3','montre03');window.status='Joue avec de drôles d\'animaux...'; return true" onMouseOut="Survol('RAY3','dot');window.status=''; return true" target="texte"><IMG SRC="images/jeux.gif" BORDER=0 WIDTH=61 HEIGHT=63><BR><FONT FACE="Comic Sans MS" SIZE=1>[JEU]</FONT></a></CENTER>
+</TD>
+    <TD><CENTER><IMG SRC="images/etoile2.gif" BORDER=0 WIDTH=60 HEIGHT=72 name="RAY3"></CENTER></TD>
+  </TR>
+
+  <TR>
+    <TD><CENTER><IMG SRC="images/etoile2.gif" BORDER=0 WIDTH=60 HEIGHT=72 name="RAY4"></CENTER></TD>
+    <TD width="90">
+<CENTER><A HREF="../presse/presse.html" onMouseOver="Survol('RAY4','montre04');window.status='La Presse parle de Rayman Eveil !'; return true" onMouseOut="Survol('RAY4','dot');window.status=''; return true" target="texte"><IMG SRC="images/presse.gif" BORDER=0 WIDTH=59 HEIGHT=64><BR><FONT FACE="Comic Sans MS" SIZE=1>[LA PRESSE]</FONT></CENTER>
+</TD>
+</tr>
+</table>
+</BODY>
+</HTML>  
