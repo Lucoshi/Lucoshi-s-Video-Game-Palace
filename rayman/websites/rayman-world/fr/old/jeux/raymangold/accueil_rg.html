@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Ubi Soft présente : Rayman GOLD</TITLE>
+
+<script language="JavaScript">
+<!--
+
+//fonction nulle
+function vide() {}
+
+//fonction confirmation d'entrée dans Designer
+var url ="../raykit/accueil/"
+function Confirmation(message) {
+        if (confirm(message))
+                {url ="http://www.ubisoft.qc.ca/rd/fr/";
+	self.location=url
+                }
+}
+
+// test navigateur:
+
+agent = navigator.userAgent
+browserVer = 2
+
+//netscape3
+if (agent.indexOf("a/3",6) != -1)
+    {browserVer = 1}
+else
+
+//netscape4
+    {if (agent.indexOf("a/4",6) != -1)
+        browserVer = 1}
+
+//preload des images :
+if (browserVer == 1) {
+
+normal = new Image();
+normal.src = "Images/tete_ray/normal.gif";
+
+louche = new Image();
+louche.src = "Images/tete_ray/louche.gif";
+
+bas = new Image();
+bas.src = "Images/tete_ray/bas.gif";
+
+bas_g = new Image();
+bas_g.src = "Images/tete_ray/bas_g.gif";
+
+bas_d = new Image();
+bas_d.src = "Images/tete_ray/bas_d.gif";
+
+droite = new Image();
+droite.src = "Images/tete_ray/droite.gif";
+
+gauche = new Image();
+gauche.src = "Images/tete_ray/gauche.gif";
+
+haut = new Image();
+haut.src = "Images/tete_ray/haut.gif";
+
+haut_g = new Image();
+haut_g.src = "Images/tete_ray/haut_g.gif";
+
+haut_d = new Image();
+haut_d.src = "Images/tete_ray/haut_d.gif";
+
+
+}
+
+function Survol(imgDocID,imgObjName) {
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src")
+                        }
+}
+
+function Fenetre (url) {
+        this.url=url;
+        explication=window.open (url,'RaymanGold','scrollbars=yes,menubar=no,status=no,resizable=yes,width=320,height=450');
+        if (navigator.appVersion.substring(1,0)=="3")
+        {
+        explication.focus();   
+        }
+}
+// -->
+</script>
+
+<META NAME="Author" CONTENT="UBI SOFT - EP">
+<META NAME="Description" CONTENT="Le jeux Rayman Gold est un éditon spéciale regroupant les Jeux Rayman et Rayman Designer d'Ubi Sof">
+<META name="keywords" content="Rayman, Rayman Gold, Gold, Jeux, jeux vidéo,logiciels, Cd Roms,  jeux éducatifs, PC, Ubi Soft, jeu">
+</HEAD>
+
+<BODY BGCOLOR="#000000" TEXT="#FFFFC9" LINK="#FF00FF" VLINK="#FFFFC9" ALINK="#FFFFFF">
+
+<!-- Tableau general -->
+<TABLE width=100% cellpadding=10>
+<TR>
+
+<TD>
+<CENTER>
+<!-- Tableau pour le cadre -->
+</CENTER><table border=0 cellpadding=5 cellspacing=0><CENTER>
+<tr>
+<td bgcolor="00000">
+
+<!-- Tableau MENU-->
+<table border=0 cellpadding=8 cellspacing=0>
+<tr>
+<td>
+<CENTER>
+<A HREF="histoire/histoire.html" onMouseOver="Survol('zieux','haut_g');window.status='Découvrez l\'histoire de Rayman...'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_livre.gif" BORDER=0 WIDTH=90 HEIGHT=52></A><BR>
+<A HREF="histoire/histoire.html" onMouseOver="Survol('zieux','haut_g');window.status='Découvrez l\'histoire de Rayman...'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Histoire</FONT></A></CENTER>
+</td>
+<td colspan=2>
+<CENTER><A HREF="perso/personnages.html" onMouseOver="Survol('zieux','haut');window.status='Apprenez à reconnaître les principaux personnages de Rayman'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_perso.gif" BORDER=0 WIDTH=57 HEIGHT=48></A><BR>
+<A HREF="perso/personnages.html"onMouseOver="Survol('zieux','haut');window.status='Apprenez à reconnaître les principaux personnages de Rayman'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Personnages</FONT></A></CENTER>
+</td>
+<td>
+<CENTER><A HREF="mondes/mondes.html" onMouseOver="Survol('zieux','haut_d');window.status='Visite guidée des différents mondes de Rayman'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_mondes.gif" BORDER=0 WIDTH=54 HEIGHT=47></A><BR>
+<A HREF="mondes/mondes.html" onMouseOver="Survol('zieux','haut_d');window.status='Visite guidée des différents mondes de Rayman'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Les mondes<BR>
+de Rayman</FONT></A></CENTER>
+</td>
+</tr>
+<tr>
+<td>
+<CENTER><A HREF="javascript:Confirmation('\nVoulez-vous quitter le site Rayman Gold \n pour rentrer dans le monde de Rayman Designer ? \n Si oui cliquez sur OK, sinon sur ANNULER')" onMouseOver="Survol('zieux','gauche');window.status='Entrez dans le monde de Rayman Designer'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_designer.gif" BORDER=0 WIDTH=100 HEIGHT=40></a><BR>
+<A HREF="javascript:Confirmation('\nVoulez-vous quitter le site Rayman Gold \n pour rentrer dans le monde de Rayman Designer ? \n Si oui cliquez sur OK, sinon sur ANNULER')" onMouseOver="Survol('zieux','gauche');window.status='Entrez dans le monde de Rayman Designer'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Rayman&nbsp;Designer</FONT></A>
+</center></td>
+
+<td colspan=2>
+<CENTER>
+<table width=78 border=0 CELLPADDING=0 CELLSPACING=0 >
+<tr>
+<td colspan=2  width=78><IMG SRC="Images/tete_ray/tete_haut.gif" BORDER=0 WIDTH=78 HEIGHT=21></td></tr>
+<tr>
+<td width=26><IMG SRC="Images/tete_ray/tete_milieu_g.gif" BORDER=0 WIDTH=26 HEIGHT=27></td>
+<td width=52><A HREF="javascript:vide(0)" onMouseOver="Survol('zieux','louche');window.status='Oups...!'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/tete_ray/normal.gif" BORDER=0 WIDTH=52 HEIGHT=27 name="zieux"></a></td></tr>
+<tr>
+<td   colspan=2 width=78><IMG SRC="Images/tete_ray/tete_bas.gif" BORDER=0 WIDTH=78 HEIGHT=27></td></tr>
+</table>
+</CENTER>
+</td>
+
+<td>
+<CENTER><A HREF="caract/caracteristiques.html" onMouseOver="Survol('zieux','droite');window.status='Pour tout savoir sur le CD-Rom de Rayman Gold'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_technique.gif" BORDER=0 WIDTH=76 HEIGHT=50></A><BR>
+<A HREF="caract/caracteristiques.html" onMouseOver="Survol('zieux','droite');window.status='Pour tout savoir sur le CD-Rom de Rayman Gold'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Caractéristiques</FONT><BR>
+du jeu</A>
+</center></td>
+</tr>
+<tr>
+<td colspan=4>
+	<center>
+	<table width=85%>
+	<tr>
+	<td>
+<CENTER><A HREF="astuces/astuces-soluces.html" onMouseOver="Survol('zieux','bas_g');window.status='Vous voulez des codes secrets, des astuces ? C\'est par ici...'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_soluce.gif" BORDER=0 WIDTH=90 HEIGHT=46></A><BR>
+<A HREF="astuces/astuces-soluces.html" onMouseOver="Survol('zieux','bas_g');window.status='Vous voulez des codes secrets, des astuces ? C\'est par ici...'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Astuces</FONT><BR>
+<FONT FACE="Comic Sans MS" SIZE=2>et Soluces</FONT></A>
+	</center></td>
+<!--
+<td>
+<CENTER>
+<IMG SRC="Images/ico_presse_temp.gif" BORDER=0 WIDTH=29 HEIGHT=23>
+</CENTER>
+<CENTER><A HREF="presse/presse.html" onMouseOver="Survol('zieux','bas');window.status='La presse parle de Rayman Gold, Lisez là !'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ico_presse.gif" BORDER=0 WIDTH=57 HEIGHT=62></A><BR> -->
+
+	<td>
+<CENTER><A HREF="../../"  onMouseOver="Survol('zieux','bas_d');window.status='Cliquez-ici pour découvrir tous les autres sites Rayman (Rayman Junior, Rayman Eveil, Rayman Langues...'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><IMG SRC="Images/ray_clign.gif" BORDER=0 WIDTH=64 HEIGHT=68></A><BR>
+<A HREF="../../" onMouseOver="Survol('zieux','bas_d');window.status='Rayman Gold, qu\'est-ce que c\'est ?'; return true" onMouseOut="Survol('zieux','normal');window.status=''; return true"><FONT FACE="Comic Sans MS" SIZE=2>Tous les<BR>Sites Rayman</FONT></A>
+	</center></td>
+	</tr>
+	</table>
+</center></td>
+</tr>
+	<!-- logo Ubi -->
+<tr>
+<td colspan=4>
+<CENTER>
+<A HREF="/" onMouseOver="window.status='Cliquez-ici pour retourner à la page d\'accueil du site Ubi Soft'; return true;"><IMG SRC="Images/logos/ubisoft.gif" BORDER=0 WIDTH=100 HEIGHT=40 ALT="UBI SOFT" vspace=15></A>
+<BR>
+<CENTER>
+<FONT FACE="Comic Sans MS" SIZE=2>MCM partenaire de Rayman Gold</FONT><BR>
+<IMG SRC="Images/logos/mcm2.gif" BORDER=0 WIDTH=50 HEIGHT=29 vspace=5>
+</CENTER>
+</center></td>
+</table>
+
+<!-- Fin du menu -->
+</td></tr></center>
+<!-- Fin du cadre -->
+
+
+
+
+</table>
+</TD>
+
+<TD>
+<!-- Tableau PRESENTATION. -->
+
+<CENTER>
+<table>
+
+<tr>
+<td>
+<CENTER>
+                <p><IMG SRC="Images/accueil/raygold_accueil.gif" BORDER=0 WIDTH=250 HEIGHT=97> 
+                  <!-- <IMG SRC="Images/logos//logoraygold.gif" BORDER=0 WIDTH=150 HEIGHT=58 alt="Rayman GOLD"> --> 
+                </p>
+                <p>&nbsp;</p>
+              </CENTER>
+<P>
+<FONT FACE="Comic Sans MS" SIZE=3>
+<FONT COLOR="#FFFF00" size=4>A</FONT>vec plus d'un million de jeux vendus dans le monde entier, <B>Rayman</B> est un succès incontestable et la référence des jeux de plate-formes !
+<P>
+<FONT COLOR="#FFFF00" size=4>A</FONT>ujourd'hui, <A HREF="../../" onMouseOver="window.status='Cliquez-ici pour retourner à la page d\'accueil du site Ubi Soft'; return true;">Ubi Soft</A> crée le coffret Rayman Gold, qui réunit la version complète du jeu original
+ <A HREF="javascript:Fenetre('drayman.html')"  onMouseOver="window.status='Voir la descritpion du jeu Rayman'; return true;" onMouseOut="window.status=''; return true;">Rayman</A> et  <A HREF="javascript:Fenetre('draymandesigner.html')"  onMouseOver="window.status='Voir la descritpion du jeu Rayman DESIGNER'; return true;" onMouseOut="window.status=''; return true;">Rayman&nbsp;Designer</a>.</FONT>
+
+<P>
+<CENTER>
+<hr noshade size=1 width=50%>
+	<table>
+	<tr>
+	<td>
+	<DIV ALIGN="RIGHT">
+	<FONT COLOR="#CECE00" SIZE=2>
+	<nobr>
+	<I><B>Configuration minimale:</B><BR>
+	Windows 95<BR>
+	Processeur Pentium 60 Mhz<BR>
+	16 Mo de mémoire vive (RAM)<BR>
+	</nobr>
+	</I>
+	</FONT>
+	</DIV>
+	</td>
+	<td>
+	<CENTER>
+	<IMG SRC="Images/ico_demo.gif" BORDER=0 WIDTH=47 HEIGHT=50 hspace=15>
+	</CENTER>
+	</td>
+	</tr>
+	</table>
+</CENTER>
+
+</td>
+</tr>
+</table>
+</CENTER>
+<!-- Fin de la présentation -->
+</TD>
+
+</TR>
+</TABLE>
+<!-- Fin de la page -->
+
+
+</BODY>
+</HTML>
+                               
