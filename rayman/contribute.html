@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glade of Dreams - How to Contribute</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f7d6e8;
+        color: #4a2037;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    a { color: #174f8a; }
+    header, main, footer { max-width: 1000px; margin: auto; }
+
+    header {
+        padding: 24px 18px 10px;
+        text-align: center;
+    }
+
+    header h1 { margin-bottom: 4px; }
+    header h2 { margin-top: 0; }
+
+    .guide {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background: #fdebf4;
+        border: 3px double #a64d78;
+        padding: 18px;
+        margin: 10px 18px 22px;
+    }
+
+    .guide img {
+        width: 180px;
+        height: auto;
+        image-rendering: auto;
+        border: 2px solid #a64d78;
+        background: white;
+    }
+
+    .intro, .contribution, .section, .cta {
+        background: #fff7fb;
+        border: 2px solid #c47da1;
+        margin: 14px 18px;
+        padding: 18px;
+    }
+
+    /* Container Compacto para a Lista Suspensa */
+    .contribution-container {
+        background: #fff7fb;
+        border: 2px solid #c47da1;
+        margin: 14px 18px;
+        padding: 22px;
+    }
+
+    .selector-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .selector-box label {
+        display: block;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #8f315f;
+        margin-bottom: 10px;
+    }
+
+    .dropdown-select {
+        width: 100%;
+        max-width: 600px;
+        padding: 12px 16px;
+        font-size: 1.05em;
+        border: 2px solid #a64d78;
+        background-color: #fdebf4;
+        color: #4a2037;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .dropdown-select:hover, .dropdown-select:focus {
+        background-color: #fff0f7;
+        border-color: #8f315f;
+    }
+
+    .section-content {
+        display: none;
+        animation: fadeIn 0.3s ease-in-out;
+        padding-top: 10px;
+    }
+
+    .section-content.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section h2 {
+        margin-top: 0;
+        color: #8f315f;
+        border-bottom: 2px dotted #c47da1;
+        padding-bottom: 8px;
+    }
+
+    .section h3 {
+        color: #8f315f;
+    }
+
+    .section ul {
+        margin-bottom: 0;
+        padding-left: 24px;
+    }
+
+    .section ul li {
+        margin-bottom: 6px;
+    }
+
+    .ai-cleanup {
+        background: #fff0f7;
+        border-color: #b85d87;
+    }
+
+    blockquote {
+        margin: 16px 0 0;
+        padding: 10px 14px;
+        background: #f8dce9;
+        border-left: 5px solid #a64d78;
+        font-style: italic;
+    }
+
+    .cta {
+        text-align: center;
+        background: #fce5f1;
+        border-color: #b85c89;
+    }
+
+    .button {
+        display: inline-block;
+        margin: 7px;
+        padding: 10px 16px;
+        background: #8f315f;
+        color: white;
+        text-decoration: none;
+        border: 2px outset #d49ab8;
+        font-weight: bold;
+    }
+
+    .button:hover {
+        background: #a83d70;
+    }
+
+    .back {
+        text-align: center;
+        margin: 24px 18px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 650px) {
+        .guide {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Glade of Dreams Archive</h1>
+    <h2>How to Contribute</h2>
+</header>
+
+<main>
+
+<section class="guide">
+    <img src="images/mr-lubberty.png"
+         alt="Mr. Lubberty, the Rabbid guide of the Glade of Dreams Archive">
+
+    <div>
+        <h2>Mr. Lubberty</h2>
+        <p><strong>Mr. Lubberty:</strong>
+        “Welcome, friend. The Glade of Dreams is a rather large place,
+        and preserving everything within it is no small task.
+        If you'd like to help, there are many ways you can contribute.”</p>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>🤝 Want to Help Preserve the Glade?</h2>
+    <p>
+        Whether you're a researcher, artist, programmer, archivist,
+        translator, tester, or simply someone with something valuable
+        to contribute, we'd love to hear from you.
+    </p>
+    <a class="button" href="contribute.html">✨ I Want to Contribute!</a>
+</section>
+
+<!-- Bloco Concentrado das 19 Opções -->
+<section class="contribution-container">
+    <div class="selector-box">
+        <label for="contributionSelect">📋 Select a Contribution Area to View Details:</label>
+        <select id="contributionSelect" class="dropdown-select" onchange="showSection(this.value)">
+            <option value="cat1">1. 📝 Research & Documentation</option>
+            <option value="cat2">2. 🌐 Website Development & HTML</option>
+            <option value="cat3">3. 🎨 Artwork & Graphics</option>
+            <option value="cat4">4. 🖼️️ Image Restoration</option>
+            <option value="cat5">5. 🧹 Cleaning AI-Generated HTML Artifacts</option>
+            <option value="cat6">6. 📸 Screenshots & Scans</option>
+            <option value="cat7">7. 🎮 Game Information & Preservation</option>
+            <option value="cat8">8. 🎵 Music & Audio Preservation</option>
+            <option value="cat9">9. 🎬 Video Preservation</option>
+            <option value="cat10">10. 📚 Manuals, Magazines & Printed Materials</option>
+            <option value="cat11">11. 🔍 Fact-Checking & Source Verification</option>
+            <option value="cat12">12. 🌍 Translation & Localization</option>
+            <option value="cat13">13. 💾 File Organization & Archival Work</option>
+            <option value="cat14">14. 🕹️️ Testing & Usability</option>
+            <option value="cat15">15. ✍️ Writing & Proofreading</option>
+            <option value="cat16">16. 🔧 Website Restoration</option>
+            <option value="cat17">17. 🗂️ Metadata, Cataloguing & Tagging</option>
+            <option value="cat18">18. 💡 Finding Missing Material</option>
+            <option value="cat19">19. 🐛 Finding & Reporting Website Errors</option>
+        </select>
+    </div>
+
+    <!-- Conteúdos Individuais das Fases -->
+    <div id="cat1" class="section-content section active">
+        <h2>1. 📝 Research &amp; Documentation</h2>
+        <p>Help us uncover, document, and preserve information about the games and their communities.</p>
+        <ul>
+            <li>Find missing information.</li>
+            <li>Verify facts and dates.</li>
+            <li>Locate forgotten or obscure sources.</li>
+            <li>Document the history of the games and their communities.</li>
+            <li>Point out information that needs correction.</li>
+            <li>Research developers, publishers, artists, musicians, and other contributors.</li>
+            <li>Research development histories.</li>
+            <li>Locate interviews and developer statements.</li>
+            <li>Document regional releases and versions.</li>
+            <li>Investigate cancelled, unreleased, or prototype material.</li>
+            <li>Compare information between different sources.</li>
+            <li>Help identify unknown or incorrectly identified material.</li>
+        </ul>
+    </div>
+
+    <div id="cat2" class="section-content section">
+        <h2>2. 🌐 Website Development &amp; HTML</h2>
+        <p>Help build, maintain, and improve the Palace's webpages and HTML.</p>
+        <ul>
+            <li>Create new webpages.</li>
+            <li>Improve existing webpages.</li>
+            <li>Write and organize HTML.</li>
+            <li>Develop CSS and JavaScript features.</li>
+            <li>Build navigation systems.</li>
+            <li>Create indexes and archive directories.</li>
+            <li>Add interactive features.</li>
+            <li>Create hidden secrets and Easter eggs.</li>
+            <li>Develop ARG elements and puzzles.</li>
+            <li>Create special events and discoveries.</li>
+            <li>Add old-web effects and functionality.</li>
+            <li>Improve accessibility.</li>
+            <li>Improve browser compatibility.</li>
+            <li>Fix bugs in the Palace's own website.</li>
+            <li>Help keep the site's code organized and readable.</li>
+        </ul>
+    </div>
+
+    <div id="cat3" class="section-content section">
+        <h2>3. 🎨 Artwork &amp; Graphics</h2>
+        <p>Help create and prepare artwork and graphics for the archives.</p>
+        <ul>
+            <li>Create archive graphics.</li>
+            <li>Create buttons, banners, icons, and backgrounds.</li>
+            <li>Create illustrations.</li>
+            <li>Design page decorations.</li>
+            <li>Recreate missing website graphics.</li>
+            <li>Create diagrams and visual guides.</li>
+            <li>Prepare artwork for different screen sizes.</li>
+            <li>Identify and document the original source of artwork.</li>
+        </ul>
+    </div>
+
+    <div id="cat4" class="section-content section">
+        <h2>4. 🖼️ Image Restoration</h2>
+        <p>Help restore images while preserving their original appearance.</p>
+        <ul>
+            <li>Repair damaged images.</li>
+            <li>Improve readability of old scans.</li>
+            <li>Remove accidental damage or corruption.</li>
+            <li>Crop and straighten scans when appropriate.</li>
+            <li>Repair missing portions when restoration is possible.</li>
+            <li>Improve contrast and legibility.</li>
+            <li>Prepare archival copies.</li>
+            <li>Compare restored images against original sources.</li>
+            <li>Preserve the original file alongside restored versions whenever possible.</li>
+        </ul>
+    </div>
+
+    <div id="cat5" class="section-content section ai-cleanup">
+        <h2>5. 🧹 Cleaning AI-Generated HTML Artifacts</h2>
+        <p>Help clean up HTML that was generated or assisted by AI.</p>
+        <ul>
+            <li>Remove unnecessary or nonsensical code.</li>
+            <li>Fix broken HTML structure.</li>
+            <li>Remove redundant elements and classes.</li>
+            <li>Correct bad formatting.</li>
+            <li>Remove duplicated code.</li>
+            <li>Simplify unnecessarily complicated markup.</li>
+            <li>Fix incorrect nesting.</li>
+            <li>Remove unused elements.</li>
+            <li>Correct incorrect attributes.</li>
+            <li>Make the code easier for humans to understand and maintain.</li>
+            <li>Make AI-assisted code more faithful to the intended design.</li>
+        </ul>
+        <blockquote>
+            “Artificial intelligence has many talents. Writing twelve unnecessary
+            &lt;div&gt; elements is apparently one of them.”
+        </blockquote>
+    </div>
+
+    <div id="cat6" class="section-content section">
+        <h2>6. 📸 Screenshots &amp; Scans</h2>
+        <ul>
+            <li>Capture gameplay screenshots.</li>
+            <li>Capture menus and interfaces.</li>
+            <li>Capture old websites.</li>
+            <li>Scan printed material.</li>
+            <li>Scan advertisements and promotional material.</li>
+            <li>Locate missing screenshots.</li>
+            <li>Locate screenshots from older versions of games.</li>
+            <li>Document changes between releases.</li>
+            <li>Provide original-resolution material whenever possible.</li>
+        </ul>
+    </div>
+
+    <div id="cat7" class="section-content section">
+        <h2>7. 🎮 Game Information &amp; Preservation</h2>
+        <ul>
+            <li>Document gameplay mechanics.</li>
+            <li>Document characters, levels, locations, items, and collectibles.</li>
+            <li>Document secrets and Easter eggs.</li>
+            <li>Document different versions and regional differences.</li>
+            <li>Record release information.</li>
+            <li>Document patches and updates.</li>
+            <li>Preserve information about cancelled or unreleased content.</li>
+            <li>Identify obscure game material.</li>
+            <li>Verify information already present in the archive.</li>
+        </ul>
+    </div>
+
+    <div id="cat8" class="section-content section">
+        <h2>8. 🎵 Music &amp; Audio Preservation</h2>
+        <ul>
+            <li>Preserve soundtracks.</li>
+            <li>Preserve sound effects.</li>
+            <li>Preserve voice clips.</li>
+            <li>Locate promotional audio and interviews.</li>
+            <li>Preserve radio appearances and old recordings.</li>
+            <li>Document composers and musicians.</li>
+            <li>Identify music used in games and promotional material.</li>
+            <li>Document different soundtrack releases.</li>
+            <li>Locate obscure or difficult-to-find recordings.</li>
+        </ul>
+    </div>
+
+    <div id="cat9" class="section-content section">
+        <h2>9. 🎬 Video Preservation</h2>
+        <ul>
+            <li>Commercials and trailers.</li>
+            <li>Gameplay footage.</li>
+            <li>Interviews and television appearances.</li>
+            <li>Promotional and developer footage.</li>
+            <li>Behind-the-scenes footage.</li>
+            <li>Web videos and fan-made historical material.</li>
+            <li>Obscure or difficult-to-find footage.</li>
+            <li>Document where and when footage originally appeared.</li>
+        </ul>
+    </div>
+
+    <div id="cat10" class="section-content section">
+        <h2>10. 📚 Manuals, Magazines &amp; Printed Materials</h2>
+        <ul>
+            <li>Game manuals.</li>
+            <li>Strategy guides.</li>
+            <li>Magazines and newspaper articles.</li>
+            <li>Advertisements and catalogues.</li>
+            <li>Brochures and promotional flyers.</li>
+            <li>Press kits and instruction sheets.</li>
+            <li>Merchandise catalogues.</li>
+            <li>Convention material.</li>
+            <li>Scan and document printed material missing from the archive.</li>
+        </ul>
+    </div>
+
+    <div id="cat11" class="section-content section">
+        <h2>11. 🔍 Fact-Checking &amp; Source Verification</h2>
+        <ul>
+            <li>Check factual claims.</li>
+            <li>Verify dates.</li>
+            <li>Compare multiple sources.</li>
+            <li>Identify unreliable information.</li>
+            <li>Check quotations.</li>
+            <li>Verify names and credits.</li>
+            <li>Verify release information.</li>
+            <li>Identify incorrect links or references.</li>
+            <li>Find stronger primary sources.</li>
+            <li>Flag claims that require additional evidence.</li>
+            <li>Correct mistakes found in existing pages.</li>
+        </ul>
+    </div>
+
+    <div id="cat12" class="section-content section">
+        <h2>12. 🌍 Translation &amp; Localization</h2>
+        <ul>
+            <li>Translate archive pages.</li>
+            <li>Translate historical documents.</li>
+            <li>Translate manuals and advertisements.</li>
+            <li>Translate interviews.</li>
+            <li>Translate captions and descriptions.</li>
+            <li>Document regional terminology.</li>
+            <li>Compare localized versions of games.</li>
+            <li>Document localization differences.</li>
+            <li>Proofread existing translations.</li>
+            <li>Preserve information that exists only in another language.</li>
+        </ul>
+    </div>
+
+    <div id="cat13" class="section-content section">
+        <h2>13. 💾 File Organization &amp; Archival Work</h2>
+        <ul>
+            <li>Organize folders.</li>
+            <li>Rename files consistently.</li>
+            <li>Identify duplicate files.</li>
+            <li>Separate original and restored files.</li>
+            <li>Maintain backups.</li>
+            <li>Organize archival versions.</li>
+            <li>Check file integrity.</li>
+            <li>Track where files came from.</li>
+            <li>Maintain archival copies.</li>
+            <li>Establish consistent file-naming systems.</li>
+            <li>Organize large collections of material.</li>
+        </ul>
+    </div>
+
+    <div id="cat14" class="section-content section">
+        <h2>14. 🕹️ Testing &amp; Usability</h2>
+        <ul>
+            <li>Test webpages and links.</li>
+            <li>Test interactive features.</li>
+            <li>Test hidden features and Easter eggs.</li>
+            <li>Test ARG elements.</li>
+            <li>Test pages on different browsers and screen sizes.</li>
+            <li>Identify confusing navigation.</li>
+            <li>Identify accessibility problems.</li>
+            <li>Report visual glitches.</li>
+            <li>Report usability problems.</li>
+            <li>Make sure visitors can find the information they need.</li>
+        </ul>
+    </div>
+
+    <div id="cat15" class="section-content section">
+        <h2>15. ✍️ Writing &amp; Proofreading</h2>
+        <ul>
+            <li>Write archive descriptions.</li>
+            <li>Write historical articles.</li>
+            <li>Improve existing articles.</li>
+            <li>Proofread pages.</li>
+            <li>Correct spelling and grammar.</li>
+            <li>Improve clarity.</li>
+            <li>Rewrite confusing passages.</li>
+            <li>Maintain consistent terminology.</li>
+            <li>Write captions.</li>
+            <li>Write explanations for archival material.</li>
+            <li>Make technical information easier to understand.</li>
+        </ul>
+    </div>
+
+    <div id="cat16" class="section-content section">
+        <h2>16. 🔧 Website Restoration</h2>
+        <p>Help restore old, lost, damaged, or incomplete websites.</p>
+        <ul>
+            <li>Recover missing webpages.</li>
+            <li>Reconstruct broken pages.</li>
+            <li>Restore old HTML.</li>
+            <li>Restore original navigation.</li>
+            <li>Recreate missing graphics.</li>
+            <li>Repair broken links.</li>
+            <li>Reconstruct missing layouts.</li>
+            <li>Restore archived website content.</li>
+            <li>Preserve different versions of a website.</li>
+            <li>Compare old versions of webpages.</li>
+            <li>Recreate websites from screenshots or surviving files.</li>
+            <li>Preserve original appearance and functionality as faithfully as possible.</li>
+        </ul>
+        <blockquote>
+            “Restoration is not about making an old website look modern.
+            Sometimes the blinking text and tiny buttons are part of the history.”
+        </blockquote>
+    </div>
+
+    <div id="cat17" class="section-content section">
+        <h2>17. 🗂️ Metadata, Cataloguing &amp; Tagging</h2>
+        <ul>
+            <li>Add metadata.</li>
+            <li>Identify dates, creators, and sources.</li>
+            <li>Tag files.</li>
+            <li>Categorize material.</li>
+            <li>Create indexes.</li>
+            <li>Maintain databases and lists.</li>
+            <li>Record version and regional information.</li>
+            <li>Link related archival material.</li>
+            <li>Identify relationships between sources.</li>
+        </ul>
+    </div>
+
+    <div id="cat18" class="section-content section">
+        <h2>18. 💡 Finding Missing Material</h2>
+        <ul>
+            <li>Search for lost webpages.</li>
+            <li>Find missing screenshots.</li>
+            <li>Find old promotional material.</li>
+            <li>Locate forgotten interviews.</li>
+            <li>Find old videos.</li>
+            <li>Locate missing manuals.</li>
+            <li>Find magazine articles.</li>
+            <li>Search old fan sites and web archives.</li>
+            <li>Contact collectors and preservation communities.</li>
+            <li>Identify material known to exist but not yet archived.</li>
+        </ul>
+        <blockquote>
+            “Sometimes the most valuable contribution is simply knowing where to look.”
+        </blockquote>
+    </div>
+
+    <div id="cat19" class="section-content section">
+        <h2>19. 🐛 Finding &amp; Reporting Website Errors</h2>
+        <ul>
+            <li>Report broken links.</li>
+            <li>Report missing images.</li>
+            <li>Report incorrect information.</li>
+            <li>Report HTML, CSS, and JavaScript errors.</li>
+            <li>Report broken navigation.</li>
+            <li>Report formatting problems.</li>
+            <li>Report missing pages.</li>
+            <li>Report browser compatibility issues.</li>
+            <li>Report accessibility problems.</li>
+            <li>Report broken Easter eggs.</li>
+            <li>Report broken ARG elements.</li>
+            <li>Report anything that doesn't work as intended.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>🌟 Ready to Help?</h2>
+    <p><strong>Mr. Lubberty:</strong> “Well then, what are you waiting for?”</p>
+    <p>
+        Whether you have one photograph, a forgotten piece of information,
+        a technical skill, an old scan, some HTML that needs fixing,
+        a missing video, or an entire collection to share, your contribution
+        can help preserve the Glade of Dreams for the future.
+    </p>
+
+    <p>
+        <a class="button" href="contribute.html">🤝 CONTRIBUTE TO THE ARCHIVE</a>
+        <a class="button" href="submit.html">Learn How to Submit →</a>
+        <a class="button" href="contact.html">Contact the Archive →</a>
+    </p>
+
+    <p>“Every contribution matters. Even the small ones.”</p>
+
+    <p><em>Mr. Lubberty gives a calm nod.</em></p>
+
+    <p><strong>“And please remember…”</strong></p>
+    <p><strong>“Don't delete the index.”</strong></p>
+    <p><em>His ears twitch.</em></p>
+    <p><strong>“Please don't delete the index.”</strong></p>
+</section>
+
+<nav class="back">
+    <a href="glade-of-dreams.html">← Return to the Glade of Dreams Archive</a>
+</nav>
+
+</main>
+
+<footer>
+    <p>Lucoshi's Video Game Palace</p>
+</footer>
+
+<script>
+    function showSection(targetId) {
+        // Esconde todas as seções
+        const sections = document.querySelectorAll('.section-content');
+        sections.forEach(section => section.classList.remove('active'));
+
+        // Exibe apenas a seção selecionada no dropdown
+        const selectedSection = document.getElementById(targetId);
+        if (selectedSection) {
+            selectedSection.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
