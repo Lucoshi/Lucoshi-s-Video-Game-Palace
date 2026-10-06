@@ -1,0 +1,47 @@
+.copy {
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+color: #cccccc }
+
+.fea {
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+color: #000000 }
+
+.subn {
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: bold;
+color: #ffffff }
+
+.nws {
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+color: #ffd900 }
+
+A.clik:link { text-decoration: none; text-transform: none; font-weight: normal; color: #F5C760}
+A.clik:visited { text-decoration: none; text-transform: none; font-weight: normal; color: #F5C760}
+A.clik:active { text-decoration: underline; text-transform: none; font-weight: normal; color: #ffff66}
+A.clik:hover { text-decoration: underline; text-transform: none; font-weight: normal; color: #ffff66}
+
+A.newsl:link { text-decoration: none; text-transform: none; font-weight: bold; color: #ffd900}
+A.newsl:visited { text-decoration: none; text-transform: none; font-weight: bold; color: #ffd900}
+A.newsl:active { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffd900}
+A.newsl:hover { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffd900}
+
+A.subnl:link { text-decoration: none; text-transform: none; font-weight: bold; color: #ffffff}
+A.subnl:visited { text-decoration: none; text-transform: none; font-weight: bold; color: #ffffff}
+A.subnl:active { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffffff}
+A.subnl:hover { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffffff}
+
+A.feal:link { text-decoration: none; text-transform: none; font-weight: bold; color: #000066}
+A.feal:visited { text-decoration: none; text-transform: none; font-weight: bold; color: #000066}
+A.feal:active { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffcc00}
+A.feal:hover { text-decoration: underline; text-transform: none; font-weight: bold; color: #ffcc00}
