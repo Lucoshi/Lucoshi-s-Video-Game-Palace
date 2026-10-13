@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mushroom Kingdom Archive</title>
+  <title>Mushroom Kingdom Archive Network</title>
 
   <style>
 
@@ -20,38 +20,38 @@
 
     /* Background */
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background:
-          linear-gradient(
-            rgba(80,5,8,0.72),
-            rgba(35,5,8,0.88)
-          ),
-          url("./artwork/3d/misc/mario-cast.png");
-        background-size: cover;
-        background-position: center;
-        z-index: -2;
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(
+          rgba(80,5,8,0.72),
+          rgba(35,5,8,0.88)
+        ),
+        url("./artwork/3d/misc/mario-cast.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
 
     /* CRT scanlines */
 
-      body::after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background:
-          repeating-linear-gradient(
-            to bottom,
-            rgba(255,40,40,0.025),
-            rgba(255,40,40,0.025) 1px,
-            transparent 1px,
-            transparent 3px
-          );
-        pointer-events: none;
-        z-index: -1;
-      }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255,40,40,0.025),
+          rgba(255,40,40,0.025) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      z-index: -1;
+    }
 
     /* Header */
 
@@ -219,184 +219,252 @@
 
     <section class="intro-box">
 
-      <h2>Welcome to the Archive</h2>
+      <h2>Welcome to the Mushroom Kingdom Archive Network</h2>
 
       <p>
         The Mushroom Kingdom Archive is an interactive museum and preservation
         project documenting the history of Mario-related media, collectibles,
-        prototypes, promotional material, and fan discoveries.
+        prototypes, promotional material, custom engines, and fan discoveries.
       </p>
 
       <p>
-        Restoration efforts remain ongoing.
+        Restoration efforts are fully active across all kingdom sectors.
       </p>
 
     </section>
 
-    <!-- Archive sections -->
+    <!-- Archive Sections Grid (23 Standardized Network Cards) -->
 
     <section class="archive-grid">
 
-      <!-- Game Archive -->
-
+      <!-- 1. Game Archive -->
       <a href="game_archive.html" class="archive-link">
-
         <div class="archive-card">
-
           <div class="archive-icon">🎮</div>
-
           <h3>Game Archive</h3>
-
-          <p>
-            Explore historical information, regional releases,
-            development history, and preserved media from Mario games.
-          </p>
-
-          <div class="status">
-            FULLY ACCESSIBLE
-          </div>
-
+          <p>Explore historical information, regional releases, development history, and preserved media from Mario games.</p>
+          <div class="status">FULLY ACCESSIBLE</div>
         </div>
-
       </a>
 
-      <!-- Collector Checklist -->
-
-      <a href="collector_checklist.html" class="archive-link">
-
+      <!-- 2. Prototypes & Unreleased -->
+      <a href="prototypes.html" class="archive-link">
         <div class="archive-card">
-
-          <div class="archive-icon">📦</div>
-
-          <h3>Collector Checklist</h3>
-
-          <p>
-            Browse collectible bundles, merchandise,
-            toys, promotional items, and rare releases.
-          </p>
-
-          <div class="status">
-            UPDATED
-          </div>
-
-        </div>
-
-      </a>
-
-      <!-- Prototype Lab -->
-
-      <a href="prototype_lab.html" class="archive-link">
-
-        <div class="archive-card">
-
           <div class="archive-icon">🧪</div>
-
-          <h3>Prototype Recovery Lab</h3>
-
-          <p>
-            Research beta content, unused assets,
-            early builds, and recovered development material.
-          </p>
-
-          <div class="status warning">
-            RESTORATION IN PROGRESS
-          </div>
-
+          <h3>Prototypes &amp; Unreleased</h3>
+          <p>Design proposals, pitch bibles, Space World beta builds, Super Mario 64 Spaceworld demos, cut levels, and unproduced media.</p>
+          <div class="status warning">RESTORATION IN PROGRESS</div>
         </div>
-
       </a>
 
-      <!-- Artwork Gallery -->
+      <!-- 3. Characters & Citizens -->
+      <a href="characters.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🍄</div>
+          <h3>Characters &amp; Citizens</h3>
+          <p>Profiles of Mario, Luigi, Peach, Bowser's Minions, official render galleries, and character model sheets.</p>
+          <div class="status">UPDATED</div>
+        </div>
+      </a>
 
+      <!-- 4. World Directory & Kingdoms -->
+      <a href="locations.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🗺️</div>
+          <h3>Locations &amp; Kingdoms</h3>
+          <p>Peach's Castle maps, Dinosaur Land layouts, Sarasaland maps, and environmental concept art across the globe.</p>
+          <div class="status warning">MAPS COMPILING</div>
+        </div>
+      </a>
+
+      <!-- 5. Power-Ups & Power Stars Vault -->
+      <a href="power_ups.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">⭐</div>
+          <h3>Power-Ups &amp; Power Stars</h3>
+          <p>Documentation on Super Mushrooms, Fire Flowers, Super Stars, Shine Sprites, and ancient artifact physics.</p>
+          <div class="status">UPDATED</div>
+        </div>
+      </a>
+
+      <!-- 6. Lore Archive 1: Royal Toadstool Archives -->
+      <a href="royal_archives.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">📜</div>
+          <h3>Royal Toadstool Archives</h3>
+          <p>Ancient records on Mushroom Kingdom monarchy history, Star Road origins, and divine Star Spirit prophecies.</p>
+          <div class="status warning">ROYAL SEALS INDEXING</div>
+        </div>
+      </a>
+
+      <!-- 7. Lore Archive 2: Koopa Troop Command Keep -->
+      <a href="koopa_command.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🏰</div>
+          <h3>Koopa Troop Command Keep</h3>
+          <p>Dark Land military records, Kamek magic alchemy, Airship blueprints, and Bowser's castle architectures.</p>
+          <div class="status restricted">VOLCANO HEAT WARNING</div>
+        </div>
+      </a>
+
+      <!-- 8. Lore Archive 3: Subcon & Nightmare Logs -->
+      <a href="subcon_lore.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🌀</div>
+          <h3>Subcon &amp; Dream Logs</h3>
+          <p>Dimensional research on Subcon dream portals, Wart's tyranny, and parallel realm anomalies.</p>
+          <div class="status warning">DREAM SIGNAL ACTIVE</div>
+        </div>
+      </a>
+
+      <!-- 9. Collector Checklist -->
+      <a href="collector_checklist.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">📦</div>
+          <h3>Collector Checklist</h3>
+          <p>Browse collectible bundles, merchandise, figures, plushies, promotional items, and rare physical releases.</p>
+          <div class="status">UPDATED</div>
+        </div>
+      </a>
+
+      <!-- 10. Websites Archives -->
+      <a href="websites.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🌐</div>
+          <h3>Websites Archives</h3>
+          <p>Archived official promo websites, 1999 Mario Party portals, Flash mini-games, and downloadable media kits.</p>
+          <div class="status warning">NEED MORE ASSETS</div>
+        </div>
+      </a>
+
+      <!-- 11. Artwork Gallery -->
       <a href="artwork_gallery.html" class="archive-link">
-
         <div class="archive-card">
-
-          <div class="archive-icon">🖼️</div>
-
+          <div class="archive-icon">🎨</div>
           <h3>Artwork Gallery</h3>
-
-          <p>
-            Preserved promotional artwork,
-            manuals, magazine scans, renders, and illustrations.
-          </p>
-
-          <div class="status">
-            ARCHIVED
-          </div>
-
+          <p>Preserved promotional artwork, manuals, magazine scans, high-resolution SGI renders, and illustrations.</p>
+          <div class="status">ARCHIVED</div>
         </div>
-
       </a>
 
-      <!-- Comic & Animation Archive -->
-
-      <a href="media_archive.html" class="archive-link">
-
+      <!-- 12. Music & Sound Archives -->
+      <a href="music_archive.html" class="archive-link">
         <div class="archive-card">
+          <div class="archive-icon">🎵</div>
+          <h3>Music Archive</h3>
+          <p>Koji Kondo soundtrack history, uncompressed OST rips, voice actor soundboards, and unused audio clips.</p>
+          <div class="status">UPDATED</div>
+        </div>
+      </a>
 
+      <!-- 13. Video Vault -->
+      <a href="video_vault.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🎬</div>
+          <h3>Video Vault</h3>
+          <p>Archived Japanese TV commercials, live-action suit promos, Space World showcases, E3 trailers, and cartoon clips.</p>
+          <div class="status warning">RESTORATION IN PROGRESS</div>
+        </div>
+      </a>
+
+      <!-- 14. Print & Press Archive -->
+      <a href="print_archive.html" class="archive-link">
+        <div class="archive-card">
           <div class="archive-icon">📚</div>
-
-          <h3>Media Archive</h3>
-
-          <p>
-            Preserved comics, cartoons,
-            anime material, manuals,
-            and historical publications.
-          </p>
-
-          <div class="status">
-            ARCHIVED
-          </div>
-
+          <h3>Print &amp; Press Archive</h3>
+          <p>Scans of official Nintendo Power strategy guides, Super Mario Bros. manga adaptations, press kit binders, and articles.</p>
+          <div class="status restricted">NOT MADE</div>
         </div>
-
       </a>
 
-      <!-- Event Exhibits -->
+      <!-- 15. Localization Library -->
+      <a href="localization.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🌍</div>
+          <h3>Localization Library</h3>
+          <p>Japanese vs. Western dialogue changes, character name shifts, regional censorship, and international box art variations.</p>
+          <div class="status restricted">NOT MADE</div>
+        </div>
+      </a>
 
+      <!-- 16. Desktop Customization Vault -->
+      <a href="desktop_vault.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🖥️</div>
+          <h3>Desktop Customization</h3>
+          <p>Retro Windows themes, animated Super Star cursors, Coin sound schemes, icons, wallpapers, and custom skins.</p>
+          <div class="status">THEMES READY</div>
+        </div>
+      </a>
+
+      <!-- 17. Personal Projects -->
+      <a href="custom_frameworks.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">⚙️</div>
+          <h3>Personal Projects</h3>
+          <p>My custom software, open-source frameworks, personal fangame concepts, original character designs, and fanfictions.</p>
+          <div class="status warning">IN ACTIVE DEVELOPMENT</div>
+        </div>
+      </a>
+
+      <!-- 18. Crossovers & Kart Racers -->
+      <a href="crossovers.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">💥</div>
+          <h3>Racers &amp; Crossovers</h3>
+          <p>Mario Kart history, Super Smash Bros character move-sets, Mario Party spin-off mechanics, and competitive brawlers.</p>
+          <div class="status warning">TOURNAMENT READY</div>
+        </div>
+      </a>
+
+      <!-- 19. Fan History & Archives -->
+      <a href="fan_history.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">👾</div>
+          <h3>Fan History &amp; Archives</h3>
+          <p>Classic 90s/2000s Mario fan site WebRings, SMW Central ROM hack preservation, fan art, and community history.</p>
+          <div class="status warning">ARCHIVING FAN SITES</div>
+        </div>
+      </a>
+
+      <!-- 20. Events & Trade Shows -->
       <a href="event_exhibits.html" class="archive-link">
-
         <div class="archive-card">
-
-          <div class="archive-icon">🎡</div>
-
-          <h3>Event Exhibits</h3>
-
-          <p>
-            Documentation of Nintendo events,
-            kiosks, Space World showcases,
-            and promotional experiences.
-          </p>
-
-          <div class="status">
-            UPDATED
-          </div>
-
+          <div class="archive-icon">🎪</div>
+          <h3>Events &amp; Trade Shows</h3>
+          <p>Documentation of Nintendo events, kiosks, Space World showcases, E3 booths, and promotional launch experiences.</p>
+          <div class="status">UPDATED</div>
         </div>
-
       </a>
 
-      <!-- Restricted sector -->
-
-      <a href="restoration_sector_3.html" class="archive-link">
-
+      <!-- 21. Collaborators & Guides -->
+      <a href="collaborators.html" class="archive-link">
         <div class="archive-card">
-
-          <div class="archive-icon">🔒</div>
-
-          <h3>Restoration Sector 3</h3>
-
-          <p>
-            Access currently unavailable.
-          </p>
-
-          <div class="status restricted">
-            RESTRICTED
-          </div>
-
+          <div class="archive-icon">🤝</div>
+          <h3>Collaborators &amp; Guides</h3>
+          <p>Meet the researchers and archivists, view authored guides, and explore the specialized preservation roles.</p>
+          <div class="status">INDEX ACTIVE</div>
         </div>
+      </a>
 
+      <!-- 22. How to Contribute -->
+      <a href="contribute.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">✨</div>
+          <h3>How to Contribute</h3>
+          <p>Discover ways you can help collect, restore, clean, and document data for the Mushroom Kingdom Archive.</p>
+          <div class="status">STABLE</div>
+        </div>
+      </a>
+
+      <!-- 23. Restoration Sector 3 (Secret / Locked) -->
+      <a href="restoration_sector_3.html" class="archive-link">
+        <div class="archive-card">
+          <div class="archive-icon">🔒</div>
+          <h3>Restoration Sector 3</h3>
+          <p>Access currently unavailable.</p>
+          <div class="status restricted">RESTRICTED</div>
+        </div>
       </a>
 
     </section>
@@ -404,7 +472,7 @@
     <footer>
 
       Lucoshi's Video Game Palace Archive Network<br>
-      Last restoration update: 05/21/2026
+      Last restoration update: 10/11/2026
 
     </footer>
 
