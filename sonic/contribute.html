@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobius Archive - How to Contribute</title>
+<style>
+/* Base Styling for Mobius Archive */
+body {
+    margin: 0;
+    background: #000090;
+    color: white;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url("./images/mobius-background.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
+    pointer-events: none;
+    z-index: 5;
+}
+
+header {
+    background: linear-gradient(to bottom, #0066d6, #00007d);
+    border-bottom: 4px solid #ffd000;
+    padding: 24px;
+    box-shadow: 0 4px 10px #0008;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #ffffff;
+}
+
+header h2 {
+    margin-top: 8px;
+    color: #ffd000;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.main-container {
+    padding: 32px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro-box, .contribution-section, .cta-box {
+    background: rgba(18, 26, 36, 0.94);
+    border: 2px solid #24425c;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 0 15px #0008;
+}
+
+.guide-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.guide-flex img {
+    width: 180px;
+    height: auto;
+    border: 2px solid #ffd000;
+    border-radius: 12px;
+    background: #121a24;
+}
+
+h2 { color: #ffd000; margin-top: 0; }
+h3 { color: #ffffff; margin-top: 0; }
+p, li { color: #dddddd; line-height: 1.6; }
+
+blockquote {
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    background: rgba(255, 208, 0, 0.12);
+    border-left: 5px solid #ffd000;
+    font-style: italic;
+    color: #ffd000;
+}
+
+/* CAROUSEL WRAPPER WITH SIDE ARROWS */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+.contribution-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: rgba(22, 32, 44, 0.96);
+    border: 2px solid #24425c;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.contribution-card h2 {
+    font-size: 22px;
+    color: #ffd000;
+    border-bottom: 1px dashed #ffd000;
+    padding-bottom: 8px;
+}
+
+.contribution-card ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.contribution-card li {
+    margin-bottom: 8px;
+    color: #dddddd;
+}
+
+.ai-cleanup-card {
+    background: rgba(28, 40, 56, 0.98);
+    border-color: #ffd000;
+}
+
+/* Navigation Arrow Buttons */
+.nav-arrow {
+    background: linear-gradient(to bottom, #0066d6, #00007d);
+    border: 2px solid #ffd000;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 10px #0008;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.nav-arrow:hover {
+    background: #ffd000;
+    color: #00007d;
+    transform: scale(1.1);
+}
+
+.nav-arrow.prev { margin-right: 15px; }
+.nav-arrow.next { margin-left: 15px; }
+
+/* Page Indicators */
+.carousel-counter {
+    text-align: center;
+    color: #ffd000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.cta-box {
+    text-align: center;
+    border-color: #ffd000;
+    background: rgba(18, 26, 36, 0.96);
+}
+
+.cta-link, .button {
+    display: inline-block;
+    margin: 6px;
+    padding: 12px 18px;
+    background: linear-gradient(to bottom, #0066d6, #00007d);
+    border: 2px solid #ffd000;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-link:hover, .button:hover {
+    background: #ffd000;
+    color: #00007d;
+}
+
+.back {
+    text-align: center;
+    margin: 24px 18px;
+}
+
+.back a {
+    color: #ffd000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back a:hover { text-decoration: underline; }
+
+footer {
+    margin-top: 45px;
+    border-top: 1px solid #24425c;
+    padding: 20px 0 10px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media(max-width: 650px) {
+    .main-container { padding: 20px 14px; }
+    header h1 { font-size: 32px; }
+    .guide-flex { flex-direction: column; text-align: center; }
+    .nav-arrow { width: 38px; height: 38px; font-size: 18px; }
+    .nav-arrow.prev { margin-right: 6px; }
+    .nav-arrow.next { margin-left: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌀 Mobius Archive Network</h1>
+    <h2>How to Contribute</h2>
+</header>
+
+<main class="main-container">
+
+<section class="intro-box guide-flex">
+    <img src="images/louie-gamer.png" alt="Louie Gamer, Light Blue Tanooki Archive Guide">
+    <div>
+        <h2>Louie Gamer (Louie G.)</h2>
+        <p><strong>Louie G.:</strong> “Hey there! I'm Louie—just a light blue Tanooki keeping things cozy with my big fluffy tail. Seriously, I love this tail as much as my cyborg Chao friend, Yolkey! When I'm not hanging out, I love tinkering with Robotnik’s old robots, rewiring them so they can finally just chill out and be friends instead of causing trouble. I actually think AI and tech can be super cool and useful tools when you respect them, but I totally sympathize with everyone who worries about how dangerous and overwhelming it can get when it's misused. That's why we keep our tech balanced and grounded. We've got 19 archive tasks mapped out below, so let's roll up our sleeves and sort through everything together!”</p>
+    </div>
+</section>
+
+<section class="cta-box">
+    <h2>🤝 Want to Help Secure the Mobius Archive?</h2>
+    <p>Whether you're tweaking code safely, organizing historical data, or making friends with automated systems, your contributions keep our network safe and sound!</p>
+    <a class="button" href="contribute.html">✨ Join Louie's Crew!</a>
+</section>
+
+<!-- 19-CATEGORY CAROUSEL SECTION -->
+<section class="contribution-section">
+    <h2>⚡ 19 Duties for Archive Recruits</h2>
+    <p>Use the side arrows to review all 19 cataloging tasks:</p>
+
+    <div class="carousel-wrapper">
+        <button class="nav-arrow prev" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="track">
+
+                <article class="contribution-card">
+                    <h2>1. 📝 Research &amp; Intelligence</h2>
+                    <p>Uncover, verify, and document critical development intelligence about Sonic media and historical zone records.</p>
+                    <ul>
+                        <li>Find missing release facts and dates.</li>
+                        <li>Verify historical timeline entries.</li>
+                        <li>Locate forgotten or obscure sources.</li>
+                        <li>Document the history of games and fan communities.</li>
+                        <li>Report inaccurate information needing correction.</li>
+                        <li>Research developers, artists, musicians, and designers.</li>
+                        <li>Research zone design and level art histories.</li>
+                        <li>Locate developer interviews and statements.</li>
+                        <li>Document international releases and versions.</li>
+                        <li>Investigate cancelled games and prototypes.</li>
+                        <li>Compare information between original sources.</li>
+                        <li>Help identify unknown concept art and beta material.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>2. 🌐 Web Code Engineering &amp; HTML</h2>
+                    <p>Build, maintain, and upgrade the Archive's web layout and retro code infrastructure.</p>
+                    <ul>
+                        <li>Create new sector webpages.</li>
+                        <li>Improve existing archive indexes.</li>
+                        <li>Write clean, organized HTML structure.</li>
+                        <li>Develop custom CSS, scanlines, and JS scripts.</li>
+                        <li>Build retro navigation bars.</li>
+                        <li>Create directories for zone locations.</li>
+                        <li>Add interactive maps and UI elements.</li>
+                        <li>Build secret easter eggs and hidden ring triggers.</li>
+                        <li>Develop ARG elements and secret puzzles.</li>
+                        <li>Create special event modules.</li>
+                        <li>Add classic web effects and CRT scanlines.</li>
+                        <li>Improve layout accessibility.</li>
+                        <li>Keep the site code clean and easy to maintain.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>3. 🎨 Artwork &amp; Graphic Recon</h2>
+                    <p>Format, clean, and design promotional renders, banners, and character illustrations.</p>
+                    <ul>
+                        <li>Create archive graphics and sector icons.</li>
+                        <li>Create buttons, banners, and zone backgrounds.</li>
+                        <li>Create custom character illustrations.</li>
+                        <li>Design decorative page dividers.</li>
+                        <li>Recreate missing web graphics from archived sites.</li>
+                        <li>Create diagrams and map visuals.</li>
+                        <li>Prepare graphics for responsive screen sizes.</li>
+                        <li>Identify and document original artwork creators.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>4. 🖼️ Image Restoration &amp; Enhancement</h2>
+                    <p>Restore scanned render art, strategy guides, and box art while preserving authentic color profiles.</p>
+                    <ul>
+                        <li>Repair damaged scan files.</li>
+                        <li>Improve legibility of vintage magazine scans.</li>
+                        <li>Remove compression artifacts and noise.</li>
+                        <li>Crop and level scans accurately.</li>
+                        <li>Repair missing borders or torn pages.</li>
+                        <li>Improve contrast for text readability.</li>
+                        <li>Prepare high-resolution archival masters.</li>
+                        <li>Compare restored images against original prints.</li>
+                        <li>Preserve raw original scans alongside restored copies.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card ai-cleanup-card">
+                    <h2>5. 🧹 Cleaning AI Code Artifacts</h2>
+                    <p>Enforce strict coding discipline by removing cluttered AI-generated code snippets.</p>
+                    <ul>
+                        <li>Remove redundant or nonsensical code blocks.</li>
+                        <li>Fix broken DOM structures and missing tags.</li>
+                        <li>Remove duplicate CSS classes and useless wrapper divs.</li>
+                        <li>Correct bad indentation and formatting.</li>
+                        <li>Eliminate duplicated scripts.</li>
+                        <li>Simplify overcomplicated CSS rules.</li>
+                        <li>Fix incorrect HTML element nesting.</li>
+                        <li>Remove unused styles.</li>
+                        <li>Correct invalid HTML attributes.</li>
+                        <li>Make code human-readable for long-term preservation.</li>
+                        <li>Keep AI-assisted code strictly matching our retro design.</li>
+                    </ul>
+                    <blockquote>
+                        <div>“LOUIE'S TAKE: I love tech and tinkering with systems, but I completely understand why people get frustrated when automated tools get out of hand or create messy bloat. Let's tidy up those extra wrapper divs and keep our code clean and reliable!”</div>
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>6. 📸 Screenshots &amp; Field Captures</h2>
+                    <p>Provide native-resolution game captures, zone art, and print magazine scans.</p>
+                    <ul>
+                        <li>Capture gameplay screenshots across all releases.</li>
+                        <li>Capture UI, options menus, and HUD elements.</li>
+                        <li>Capture legacy Sonic website pages.</li>
+                        <li>Scan physical game manuals and guidebooks.</li>
+                        <li>Scan magazine ads and promo posters.</li>
+                        <li>Locate missing high-res screenshots.</li>
+                        <li>Locate pre-release beta screenshots.</li>
+                        <li>Document visual differences between game revisions.</li>
+                        <li>Provide uncompressed native resolution files.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>7. 🎮 Game Mechanics &amp; Preservation</h2>
+                    <p>Catalog movesets, physics parameters, chaos drives, and cartridge revisions.</p>
+                    <ul>
+                        <li>Document character movesets and physics.</li>
+                        <li>Catalog characters, levels, monitors, and items.</li>
+                        <li>Document secrets, easter eggs, and cheat codes.</li>
+                        <li>Document regional version differences.</li>
+                        <li>Record exact cartridge and disc release dates.</li>
+                        <li>Document post-launch updates and compilation changes.</li>
+                        <li>Preserve details on cut content and unreleased prototypes.</li>
+                        <li>Identify obscure promotional game cartridges.</li>
+                        <li>Verify historical accuracy across all entries.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>8. 🎵 Music &amp; Audio Preservation</h2>
+                    <p>Preserve soundtracks, zone loops, sound effects, and unused audio files.</p>
+                    <ul>
+                        <li>Preserve original soundtrack recordings.</li>
+                        <li>Preserve sound effects and ambient tracks.</li>
+                        <li>Preserve voice clips and character lines.</li>
+                        <li>Locate promotional audio CDs and cassettes.</li>
+                        <li>Preserve radio promos and TV audio clips.</li>
+                        <li>Document composers, arrangers, and sound engineers.</li>
+                        <li>Identify music tracks used in commercials.</li>
+                        <li>Document album releases and OST variants.</li>
+                        <li>Locate uncompressed or rare audio rips.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>9. 🎬 Video Vault Preservation</h2>
+                    <p>Archive promotional VHS tapes, TV commercials, animated series episodes, and developer footage.</p>
+                    <ul>
+                        <li>Digitize promo tapes and TV ads.</li>
+                        <li>Archive high-quality gameplay footage.</li>
+                        <li>Archive developer interviews and press tours.</li>
+                        <li>Archive promotional footage and B-roll tapes.</li>
+                        <li>Preserve behind-the-scenes footage.</li>
+                        <li>Archive animated series clips and web videos.</li>
+                        <li>Locate obscure or lost pre-release video clips.</li>
+                        <li>Document air dates and original sources.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>10. 📚 Manuals, Magazines &amp; Print</h2>
+                    <p>Preserve print media including manuals, player's guides, comic books, and merchandise catalogs.</p>
+                    <ul>
+                        <li>Scan instruction booklets.</li>
+                        <li>Scan official player's guides and walkthroughs.</li>
+                        <li>Scan gaming magazine articles and reviews.</li>
+                        <li>Scan print advertisements and catalogs.</li>
+                        <li>Scan trade show flyers and brochures.</li>
+                        <li>Scan press kit binders and folders.</li>
+                        <li>Scan toy and merchandise catalogs.</li>
+                        <li>Scan event material and convention handouts.</li>
+                        <li>Catalog printed materials missing from the database.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>11. 🔍 Fact-Checking &amp; Verification</h2>
+                    <p>Ensure all historical and technical entries across the archive remain 100% accurate.</p>
+                    <ul>
+                        <li>Double-check all historical claims.</li>
+                        <li>Verify release dates across all regions.</li>
+                        <li>Cross-reference multiple developer statements.</li>
+                        <li>Identify rumors and unverified claims.</li>
+                        <li>Verify developer quotes and translations.</li>
+                        <li>Check credit listings for accuracy.</li>
+                        <li>Verify serial codes and revision details.</li>
+                        <li>Fix dead links and broken citations.</li>
+                        <li>Locate primary sources for claims.</li>
+                        <li>Flag entries needing extra evidence.</li>
+                        <li>Correct mistakes found in published sector pages.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>12. 🌍 Translation &amp; Localization</h2>
+                    <p>Translate Japanese release scripts, foreign manuals, regional dialogue, and developer interviews.</p>
+                    <ul>
+                        <li>Translate sector pages into multiple languages.</li>
+                        <li>Translate Japanese historical documents.</li>
+                        <li>Translate foreign game manuals and promo ads.</li>
+                        <li>Translate developer interviews and columns.</li>
+                        <li>Translate image captions and gallery notes.</li>
+                        <li>Document regional name and terminology shifts.</li>
+                        <li>Compare international scripts and translations.</li>
+                        <li>Document regional censorship changes.</li>
+                        <li>Proofread existing page translations.</li>
+                        <li>Preserve region-exclusive game details.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>13. 💾 File Organization &amp; Archival Work</h2>
+                    <p>Maintain proper folder structures, metadata standards, and backup systems.</p>
+                    <ul>
+                        <li>Organize server folder structures.</li>
+                        <li>Rename files using standard naming rules.</li>
+                        <li>Find and merge duplicate files.</li>
+                        <li>Keep raw and edited scans separated cleanly.</li>
+                        <li>Maintain offline redundant backups.</li>
+                        <li>Organize historical asset versions.</li>
+                        <li>Check checksums and file integrity.</li>
+                        <li>Track source provenance for all assets.</li>
+                        <li>Keep long-term archival backups safe.</li>
+                        <li>Establish standardized file naming rules.</li>
+                        <li>Manage large-scale media collections.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>14. 🕹️ Testing &amp; Usability Inspections</h2>
+                    <p>Inspect layout performance, interactive scripts, mobile navigation, and secret triggers.</p>
+                    <ul>
+                        <li>Test sector pages and internal hyperlinks.</li>
+                        <li>Test interactive carousel modules.</li>
+                        <li>Test secret triggers and hidden ring links.</li>
+                        <li>Test ARG puzzles and interactive elements.</li>
+                        <li>Test page rendering across mobile and desktop devices.</li>
+                        <li>Identify broken or confusing navigation paths.</li>
+                        <li>Identify accessibility barriers.</li>
+                        <li>Report visual CSS or layout glitches.</li>
+                        <li>Report usability bugs across sectors.</li>
+                        <li>Ensure visitors can access information easily.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>15. ✍️ Writing &amp; Proofreading</h2>
+                    <p>Write detailed sector entries, game synopses, historical write-ups, and proofread articles.</p>
+                    <ul>
+                        <li>Write clear archive descriptions.</li>
+                        <li>Write detailed historical articles.</li>
+                        <li>Expand incomplete sector articles.</li>
+                        <li>Proofread existing draft pages.</li>
+                        <li>Fix typos, spelling, and grammar mistakes.</li>
+                        <li>Improve sentence flow and readability.</li>
+                        <li>Rewrite confusing technical passages.</li>
+                        <li>Maintain consistent terminology across pages.</li>
+                        <li>Write detailed captions for artwork.</li>
+                        <li>Write summaries for complex developer notes.</li>
+                        <li>Make technical hardware info easy to read.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>16. 🔧 Web Portal Restoration</h2>
+                    <p>Reconstruct lost sub-sites, promotional Flash microsites, and offline fan portals.</p>
+                    <ul>
+                        <li>Recover missing historical webpages.</li>
+                        <li>Reconstruct broken HTML files from Web Archive.</li>
+                        <li>Restore legacy HTML &amp; CSS code.</li>
+                        <li>Restore original site navigation bars.</li>
+                        <li>Recreate missing graphics and button banners.</li>
+                        <li>Fix broken links in archived sites.</li>
+                        <li>Reconstruct original website layouts.</li>
+                        <li>Restore archived web media and Flash files.</li>
+                        <li>Preserve multiple historical site revisions.</li>
+                        <li>Compare archived snapshots over time.</li>
+                        <li>Rebuild missing pages using screenshots or cached text.</li>
+                        <li>Preserve retro web visual aesthetics faithfully.</li>
+                    </ul>
+                    <blockquote>
+                        <div>“Just like reprogramming an old Badnik to be friendly, restoring historical web portals takes a little patience and a lot of care!”</div>
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>17. 🗂️ Metadata &amp; Cataloging</h2>
+                    <p>Catalog asset tags, publication dates, author credits, and sector indexes.</p>
+                    <ul>
+                        <li>Add descriptive metadata tags.</li>
+                        <li>Identify creation dates, authors, and origins.</li>
+                        <li>Tag image assets for easy searchability.</li>
+                        <li>Categorize archival files accurately.</li>
+                        <li>Create sector search indexes.</li>
+                        <li>Maintain master databases and lists.</li>
+                        <li>Record version numbers and regional tags.</li>
+                        <li>Link related files across different sectors.</li>
+                        <li>Identify connections between different sources.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>18. 💡 Recon &amp; Tracking Missing Material</h2>
+                    <p>Track down rare press kits, lost video clips, unreleased game builds, and obscure merchandise.</p>
+                    <ul>
+                        <li>Search for lost legacy website files.</li>
+                        <li>Find missing high-res screenshots.</li>
+                        <li>Find obscure promotional flyers.</li>
+                        <li>Locate forgotten developer interviews.</li>
+                        <li>Find unarchived promo footage.</li>
+                        <li>Locate missing game manuals.</li>
+                        <li>Find vintage gaming magazine coverage.</li>
+                        <li>Search old fan portals and web archives.</li>
+                        <li>Connect with game collectors and archivists.</li>
+                        <li>Identify missing items known to exist.</li>
+                    </ul>
+                    <blockquote>
+                        <div>“Even Yolkey helps me scan the network for missing files. If it's out there, we'll track it down!”</div>
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>19. 🐛 Bug Reporting &amp; Error Sweep</h2>
+                    <p>Debug broken links, missing assets, visual glitches, and code errors across the network.</p>
+                    <ul>
+                        <li>Report broken internal or external links.</li>
+                        <li>Report missing or corrupted image assets.</li>
+                        <li>Report factual errors or typos.</li>
+                        <li>Report HTML, CSS, or JS bugs.</li>
+                        <li>Report broken navigation buttons.</li>
+                        <li>Report alignment or layout errors.</li>
+                        <li>Report missing sector pages.</li>
+                        <li>Report browser compatibility issues.</li>
+                        <li>Report accessibility obstacles.</li>
+                        <li>Report broken secret links or easter eggs.</li>
+                        <li>Report broken ARG mechanics.</li>
+                        <li>Report anything not working as intended.</li>
+                        <li>Fix browser rendering glitches.</li>
+                        <li>Fix website bugs across all sectors.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+
+        <button class="nav-arrow next" onclick="moveSlide(1)" aria-label="Next">❯</button>
+    </div>
+
+    <div class="carousel-counter" id="counter">Category 1 of 19</div>
+</section>
+
+<section class="cta-box">
+    <h2>🌟 Ready to Join the Network?</h2>
+    <p><strong>Louie G.:</strong> “With Yolkey watching our backs and all 19 tasks covered, we've got this archive running smoother than ever!”</p>
+    <p>
+        Whether you have an unarchived scan, a missing video clip, 
+        a technical coding fix, or a rewritten Badnik script, 
+        your effort keeps Mobius shining!
+    </p>
+
+    <p>
+        <a class="button" href="contribute.html">🤝 CONTRIBUTE TO THE ARCHIVE</a>
+        <a class="button" href="submit.html">Learn How to Submit →</a>
+        <a class="button" href="contact.html">Contact the Archive →</a>
+    </p>
+
+    <p>“Back to tinkering!”</p>
+
+    <p><em>Louie fluffs his big Tanooki tail comfortably in his seat while his cyborg Chao friend Yolkey gives a cheerful robotic beep.</em></p>
+
+    <p><strong>“SYSTEMS ONLINE, LET'S KEEP ARCHIVING!”</strong></p>
+</section>
+
+<nav class="back">
+    <a href="mobius.html">← Return to the Mobius Archive Network</a>
+</nav>
+
+</main>
+
+<footer>
+    <p>Lucoshi's Video Game Palace Archive Network</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const totalSlides = 19;
+    const track = document.getElementById('track');
+    const counter = document.getElementById('counter');
+
+    function moveSlide(direction) {
+        currentIndex += direction;
+        
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+        
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        counter.textContent = `Category ${currentIndex + 1} of ${totalSlides}`;
+    }
+</script>
+
+</body>
+</html>
