@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isle o' Hags - How to Contribute</title>
+<style>
+/* Base Styling for Isle o' Hags Archive */
+body {
+    margin: 0;
+    background: #1b120c;
+    color: white;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.88)), url("./images/isle-o-hags-background.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(to bottom, rgba(216,162,76,0.08), rgba(216,162,76,0.08) 1px, transparent 1px, transparent 3px);
+    pointer-events: none;
+    z-index: 5;
+}
+
+header {
+    background: linear-gradient(to bottom, #6b3e1f, #3d2413);
+    border-bottom: 4px solid #d8a24c;
+    padding: 24px;
+    box-shadow: 0 4px 10px #0008;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #ffffff;
+}
+
+header h2 {
+    margin-top: 8px;
+    color: #ffd000;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.main-container {
+    padding: 32px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro-box, .contribution-section, .cta-box {
+    background: rgba(22, 18, 14, 0.94);
+    border: 2px solid #5a3a22;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 0 15px #0008;
+}
+
+.guide-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.guide-flex img {
+    width: 180px;
+    height: auto;
+    border: 2px solid #d8a24c;
+    border-radius: 12px;
+    background: #2a1f15;
+}
+
+h2 { color: #ffd000; margin-top: 0; }
+h3 { color: #ffffff; margin-top: 0; }
+p, li { color: #d0d0d0; line-height: 1.6; }
+
+blockquote {
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    background: rgba(216, 162, 76, 0.12);
+    border-left: 5px solid #d8a24c;
+    font-style: italic;
+    color: #ffd000;
+}
+
+/* CAROUSEL WRAPPER WITH SIDE ARROWS */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+.contribution-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: rgba(36, 26, 18, 0.96);
+    border: 2px solid #5a3a22;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.contribution-card h2 {
+    font-size: 22px;
+    color: #ffd000;
+    border-bottom: 1px dashed #d8a24c;
+    padding-bottom: 8px;
+}
+
+.contribution-card ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.contribution-card li {
+    margin-bottom: 8px;
+}
+
+.ai-cleanup-card {
+    background: rgba(46, 32, 22, 0.98);
+    border-color: #d8a24c;
+}
+
+/* Navigation Arrow Buttons */
+.nav-arrow {
+    background: linear-gradient(to bottom, #6b3e1f, #3d2413);
+    border: 2px solid #d8a24c;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 10px #0008;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.nav-arrow:hover {
+    background: #d8a24c;
+    color: #1b120c;
+    transform: scale(1.1);
+}
+
+.nav-arrow.prev { margin-right: 15px; }
+.nav-arrow.next { margin-left: 15px; }
+
+/* Page Indicators */
+.carousel-counter {
+    text-align: center;
+    color: #ffd000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.cta-box {
+    text-align: center;
+    border-color: #d8a24c;
+    background: rgba(36, 26, 18, 0.96);
+}
+
+.cta-link, .button {
+    display: inline-block;
+    margin: 6px;
+    padding: 12px 18px;
+    background: linear-gradient(to bottom, #6b3e1f, #3d2413);
+    border: 2px solid #d8a24c;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-link:hover, .button:hover {
+    background: #d8a24c;
+    color: #1b120c;
+}
+
+.back {
+    text-align: center;
+    margin: 24px 18px;
+}
+
+.back a {
+    color: #ffd000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back a:hover { text-decoration: underline; }
+
+footer {
+    margin-top: 45px;
+    border-top: 1px solid #5a3a22;
+    padding: 20px 0 10px;
+    color: #8a7a68;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media(max-width: 650px) {
+    .main-container { padding: 20px 14px; }
+    header h1 { font-size: 32px; }
+    .guide-flex { flex-direction: column; text-align: center; }
+    .nav-arrow { width: 38px; height: 38px; font-size: 18px; }
+    .nav-arrow.prev { margin-right: 6px; }
+    .nav-arrow.next { margin-left: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🧩 Isle o' Hags Archive</h1>
+    <h2>How to Contribute</h2>
+</header>
+
+<main class="main-container">
+
+<section class="intro-box guide-flex">
+    <img src="images/mombi-jombo.png" alt="Mombi-Jombo, Cyber-shaman and guide of the Isle o' Hags Archive">
+    <div>
+        <h2>Mombi-Jombo</h2>
+        <p><strong>Mombi-Jombo:</strong> “Oknamaka! Welcome to my cyber-sanctum on the Isle o' Hags! I'm Mombi-Jombo—shaman, gaming oddity hunter, and official guide for this archive network. Inspired by my ultimate hero, Mumbo-Jumbo, I've dedicated my life to gathering lost Jiggy pieces, Stop 'N' Swop mysteries, and Rareware lore. Want to help us complete the picture? Let me show you how!”</p>
+    </div>
+</section>
+
+<section class="cta-box">
+    <h2>🤝 Want to Help Preserve the Sacred Records of Isle o' Hags?</h2>
+    <p>Whether you're an investigator, artist, coder, translator, or rare cartridge collector, every contribution helps us unlock the hidden sectors of the island.</p>
+    <a class="button" href="contribute.html">✨ I Want to Contribute!</a>
+</section>
+
+<!-- 19-CATEGORY CAROUSEL SECTION -->
+<section class="contribution-section">
+    <h2>🧩 Ways You Can Contribute</h2>
+    <p>Use the side arrows to explore all 19 ways you can help the shaman archive:</p>
+
+    <div class="carousel-wrapper">
+        <button class="nav-arrow prev" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="track">
+
+                <article class="contribution-card">
+                    <h2>1. 📝 Research &amp; Documentation</h2>
+                    <p>Help us uncover, document, and preserve information about Banjo-Kazooie games, Rareware development history, and community mysteries.</p>
+                    <ul>
+                        <li>Find missing development facts and dates.</li>
+                        <li>Verify historical facts and release timeline entries.</li>
+                        <li>Locate forgotten or obscure N64 and GBA sources.</li>
+                        <li>Document community speedruns, glitches, and web history.</li>
+                        <li>Point out inaccurate entries needing correction.</li>
+                        <li>Research developers, composers, programmers, and artists.</li>
+                        <li>Research Project Dream and N64 development histories.</li>
+                        <li>Locate interviews, magazine features, and developer notes.</li>
+                        <li>Document regional releases and international versions.</li>
+                        <li>Investigate cancelled or unreleased prototypes.</li>
+                        <li>Compare information between original sources.</li>
+                        <li>Help identify unknown concept art and beta materials.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>2. 🌐 Website Development &amp; HTML</h2>
+                    <p>Help build, maintain, and upgrade the Isle o' Hags web layout, scanlines, and archive scripts.</p>
+                    <ul>
+                        <li>Create new sector webpages.</li>
+                        <li>Improve existing archive indexes.</li>
+                        <li>Write and organize clean HTML structure.</li>
+                        <li>Develop custom CSS, scanline effects, and JavaScript features.</li>
+                        <li>Build retro navigation systems.</li>
+                        <li>Create directories and world lists.</li>
+                        <li>Add interactive features and map guides.</li>
+                        <li>Create hidden secrets and Jiggy easter egg links.</li>
+                        <li>Develop ARG elements and Stop 'N' Swop puzzles.</li>
+                        <li>Create special events and temporary exhibits.</li>
+                        <li>Add old-web effects and N64 styling.</li>
+                        <li>Improve layout accessibility.</li>
+                        <li>Improve browser compatibility.</li>
+                        <li>Fix bugs in the Palace's website.</li>
+                        <li>Keep the site's code organized and readable.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>3. 🎨 Artwork &amp; Graphics</h2>
+                    <p>Help create and prepare artwork, character banners, and retro graphics for the archives.</p>
+                    <ul>
+                        <li>Create sector graphics and icons.</li>
+                        <li>Create buttons, banners, icons, and backgrounds.</li>
+                        <li>Create illustrations and fan artwork.</li>
+                        <li>Design page decorations and dividers.</li>
+                        <li>Recreate missing graphics from old web portals.</li>
+                        <li>Create diagrams and visual guides.</li>
+                        <li>Prepare artwork for different screen sizes.</li>
+                        <li>Identify and document original artwork creators.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>4. 🖼️ Image Restoration</h2>
+                    <p>Help restore high-resolution Rareware 3D renders, manual scans, and promotional art.</p>
+                    <ul>
+                        <li>Repair damaged scan files.</li>
+                        <li>Improve legibility of old magazine scans.</li>
+                        <li>Remove compression artifacts and digital noise.</li>
+                        <li>Crop and level scans accurately.</li>
+                        <li>Repair missing borders or torn manual pages.</li>
+                        <li>Improve contrast and text legibility.</li>
+                        <li>Prepare high-resolution archival masters.</li>
+                        <li>Compare restored images against original source prints.</li>
+                        <li>Preserve raw original scans alongside restored versions.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card ai-cleanup-card">
+                    <h2>5. 🧹 Cleaning AI-Generated HTML Artifacts</h2>
+                    <p>Help clean up web code that was generated or assisted by AI models.</p>
+                    <ul>
+                        <li>Remove unnecessary or nonsensical code blocks.</li>
+                        <li>Fix broken DOM structures and missing tags.</li>
+                        <li>Remove redundant CSS classes and wrapper divs.</li>
+                        <li>Correct bad formatting and spacing.</li>
+                        <li>Eliminate duplicated code snippets.</li>
+                        <li>Simplify unnecessarily complicated markup.</li>
+                        <li>Fix incorrect element nesting.</li>
+                        <li>Remove unused styles.</li>
+                        <li>Correct incorrect attributes.</li>
+                        <li>Make code easy for humans to understand and maintain.</li>
+                        <li>Keep AI-assisted code strictly matching our retro design.</li>
+                    </ul>
+                    <blockquote>
+                        “Mumbo magic is strong, but AI code magic creates 20 extra &lt;div&gt; tags! Cleaning them keeps the cyber-shaman spell running smooth!”
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>6. 📸 Screenshots &amp; Scans</h2>
+                    <p>Capture native-resolution gameplay, rare N64 beta screenshots, and high-quality print scans.</p>
+                    <ul>
+                        <li>Capture gameplay screenshots across all titles.</li>
+                        <li>Capture menus, HUD elements, and options screens.</li>
+                        <li>Capture legacy 90s Rareware websites.</li>
+                        <li>Scan physical game manuals and guidebooks.</li>
+                        <li>Scan advertisements and promotional flyers.</li>
+                        <li>Locate missing high-res screenshots.</li>
+                        <li>Locate screenshots from E3 beta builds.</li>
+                        <li>Document visual differences between releases.</li>
+                        <li>Provide uncompressed native resolution files.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>7. 🎮 Game Information &amp; Preservation</h2>
+                    <p>Document move sets, transformations, egg codes, game mechanics, and version differences.</p>
+                    <ul>
+                        <li>Document character movesets and transformations.</li>
+                        <li>Catalog characters, worlds, Jinjos, Cheato pages, and collectibles.</li>
+                        <li>Document secrets, egg codes, and cheat mechanics.</li>
+                        <li>Document regional differences and NTSC/PAL changes.</li>
+                        <li>Record release dates and cartridge revision numbers.</li>
+                        <li>Document Virtual Console and port changes.</li>
+                        <li>Preserve details about cancelled or unreleased content.</li>
+                        <li>Identify obscure promotional game cartridges.</li>
+                        <li>Verify information already present in the archive.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>8. 🎵 Music &amp; Audio Preservation</h2>
+                    <p>Preserve dynamic MIDI soundtracks, character speech mumblings, voice clips, and unused audio files.</p>
+                    <ul>
+                        <li>Preserve original soundtrack recordings.</li>
+                        <li>Preserve sound effects and environmental audio.</li>
+                        <li>Preserve voice clips and character mumbles.</li>
+                        <li>Locate promotional audio CDs and cassettes.</li>
+                        <li>Preserve radio promos and TV audio recordings.</li>
+                        <li>Document composers, arrangers, and sound designers.</li>
+                        <li>Identify music tracks used in promo material.</li>
+                        <li>Document soundtrack releases and CD variants.</li>
+                        <li>Locate uncompressed or rare audio rips.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>9. 🎬 Video Preservation</h2>
+                    <p>Archive promotional VHS tapes, TV commercials, N64 launch coverage, and developer interviews.</p>
+                    <ul>
+                        <li>Commercials and TV trailers.</li>
+                        <li>Gameplay footage and speedruns.</li>
+                        <li>Interviews and television appearances.</li>
+                        <li>Promotional and developer footage.</li>
+                        <li>Behind-the-scenes video tapes.</li>
+                        <li>Web videos and fan historical documentaries.</li>
+                        <li>Obscure or difficult-to-find footage.</li>
+                        <li>Document air dates and original sources.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>10. 📚 Manuals, Magazines &amp; Printed Materials</h2>
+                    <p>Scan and preserve print media including Nintendo Power strategy guides, press kits, and catalogs.</p>
+                    <ul>
+                        <li>Game instruction manuals.</li>
+                        <li>Official strategy guides and player's guides.</li>
+                        <li>Magazines and newspaper articles.</li>
+                        <li>Print advertisements and catalogs.</li>
+                        <li>Brochures and promotional flyers.</li>
+                        <li>Press kits and instruction sheets.</li>
+                        <li>Merchandise and toy catalogs.</li>
+                        <li>Convention handouts and event badges.</li>
+                        <li>Catalog printed material missing from the archive.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>11. 🔍 Fact-Checking &amp; Source Verification</h2>
+                    <p>Help verify historical facts, developer statements, release dates, and source citations.</p>
+                    <ul>
+                        <li>Check factual claims across entries.</li>
+                        <li>Verify dates across all release regions.</li>
+                        <li>Compare multiple primary sources.</li>
+                        <li>Identify unreliable rumors or urban legends.</li>
+                        <li>Verify quotations and developer statements.</li>
+                        <li>Verify names and staff credits.</li>
+                        <li>Verify serial codes and cartridge variations.</li>
+                        <li>Identify broken links or incorrect citations.</li>
+                        <li>Find stronger primary sources.</li>
+                        <li>Flag claims that require additional evidence.</li>
+                        <li>Correct mistakes found in existing pages.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>12. 🌍 Translation &amp; Localization</h2>
+                    <p>Translate Japanese release scripts, Gruntilda rhymes across languages, foreign manual scans, and interviews.</p>
+                    <ul>
+                        <li>Translate sector pages into multiple languages.</li>
+                        <li>Translate Japanese historical documents.</li>
+                        <li>Translate manuals and print advertisements.</li>
+                        <li>Translate interviews and columns.</li>
+                        <li>Translate captions and gallery notes.</li>
+                        <li>Document regional character name shifts.</li>
+                        <li>Compare localized versions of game text.</li>
+                        <li>Document localization differences and censorship.</li>
+                        <li>Proofread existing page translations.</li>
+                        <li>Preserve foreign exclusive game details.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>13. 💾 File Organization &amp; Archival Work</h2>
+                    <p>Organize file archives, enforce consistent naming rules, and maintain secure offline backups.</p>
+                    <ul>
+                        <li>Organize server folder structures.</li>
+                        <li>Rename files consistently across sectors.</li>
+                        <li>Identify and merge duplicate files.</li>
+                        <li>Separate raw and restored image masters.</li>
+                        <li>Maintain redundant backups.</li>
+                        <li>Organize historical asset versions.</li>
+                        <li>Check file checksums and integrity.</li>
+                        <li>Track asset provenance and source origins.</li>
+                        <li>Maintain long-term archival backups.</li>
+                        <li>Establish standardized file-naming systems.</li>
+                        <li>Organize large media collections.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>14. 🕹️ Testing &amp; Usability</h2>
+                    <p>Test website layout, navigation links, mobile rendering, and hidden Jiggy triggers.</p>
+                    <ul>
+                        <li>Test sector pages and internal links.</li>
+                        <li>Test interactive carousel components.</li>
+                        <li>Test hidden Jiggy buttons and secret links.</li>
+                        <li>Test ARG elements and puzzle triggers.</li>
+                        <li>Test pages on mobile devices and desktop screens.</li>
+                        <li>Identify confusing navigation paths.</li>
+                        <li>Identify accessibility obstacles.</li>
+                        <li>Report visual CSS or layout glitches.</li>
+                        <li>Report usability bugs across sectors.</li>
+                        <li>Make sure visitors find information easily.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>15. ✍️ Writing &amp; Proofreading</h2>
+                    <p>Write clear sector overviews, historical write-ups, game guides, and proofread published text.</p>
+                    <ul>
+                        <li>Write clear sector descriptions.</li>
+                        <li>Write detailed historical articles.</li>
+                        <li>Improve and expand draft entries.</li>
+                        <li>Proofread existing pages.</li>
+                        <li>Correct spelling, grammar, and typos.</li>
+                        <li>Improve sentence clarity and flow.</li>
+                        <li>Rewrite confusing passages.</li>
+                        <li>Maintain consistent terminology across pages.</li>
+                        <li>Write captions for artwork and renders.</li>
+                        <li>Write explanations for archival material.</li>
+                        <li>Make technical hardware info easy to read.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>16. 🔧 Website Restoration</h2>
+                    <p>Reconstruct lost Rareware sub-sites, N64 promo microsites, and offline fan portals.</p>
+                    <ul>
+                        <li>Recover missing historical webpages.</li>
+                        <li>Reconstruct broken pages from Web Archive snapshots.</li>
+                        <li>Restore legacy HTML and CSS code.</li>
+                        <li>Restore original website navigation bars.</li>
+                        <li>Recreate missing buttons and graphic banners.</li>
+                        <li>Repair broken links in archived sites.</li>
+                        <li>Reconstruct missing site layouts.</li>
+                        <li>Restore archived website media files.</li>
+                        <li>Preserve multiple historical site revisions.</li>
+                        <li>Compare old versions of webpages.</li>
+                        <li>Recreate websites from screenshots or surviving files.</li>
+                        <li>Preserve original appearance and functionality as faithfully as possible.</li>
+                    </ul>
+                    <blockquote>
+                        “Restoring classic 90s Rareware web pages means keeping the starfield background and low-res banners intact! That's pure gaming history!”
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>17. 🗂️ Metadata, Cataloguing &amp; Tagging</h2>
+                    <p>Catalog asset tags, release dates, author credits, and sector indexes.</p>
+                    <ul>
+                        <li>Add descriptive metadata tags.</li>
+                        <li>Identify dates, creators, and origins.</li>
+                        <li>Tag image files for quick searching.</li>
+                        <li>Categorize archival files accurately.</li>
+                        <li>Create sector search indexes.</li>
+                        <li>Maintain databases and master lists.</li>
+                        <li>Record version numbers and regional tags.</li>
+                        <li>Link related files across different sectors.</li>
+                        <li>Identify connections between different sources.</li>
+                    </ul>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>18. 💡 Finding Missing Material</h2>
+                    <p>Hunt down unreleased prototype builds, lost video tapes, missing strategy guides, and rare merchandise.</p>
+                    <ul>
+                        <li>Search for lost 90s website files.</li>
+                        <li>Find missing high-res screenshots.</li>
+                        <li>Find old promotional flyers and posters.</li>
+                        <li>Locate forgotten developer interviews.</li>
+                        <li>Find lost video tapes and promos.</li>
+                        <li>Locate missing game manuals.</li>
+                        <li>Find vintage gaming magazine coverage.</li>
+                        <li>Search old fan portals and web archives.</li>
+                        <li>Connect with game collectors and archivists.</li>
+                        <li>Identify material known to exist but not yet archived.</li>
+                    </ul>
+                    <blockquote>
+                        “Finding a lost Stop 'N' Swop prototype code is like discovering a Golden Feather in the wild!”
+                    </blockquote>
+                </article>
+
+                <article class="contribution-card">
+                    <h2>19. 🐛 Finding &amp; Reporting Website Errors</h2>
+                    <p>Help us debug broken links, missing assets, layout glitches, and code bugs.</p>
+                    <ul>
+                        <li>Report broken internal or external links.</li>
+                        <li>Report missing or corrupted image files.</li>
+                        <li>Report incorrect factual information.</li>
+                        <li>Report HTML, CSS, or JavaScript errors.</li>
+                        <li>Report broken navigation buttons.</li>
+                        <li>Report formatting or alignment problems.</li>
+                        <li>Report missing sector pages.</li>
+                        <li>Report browser compatibility issues.</li>
+                        <li>Report accessibility problems.</li>
+                        <li>Report broken secret links or easter eggs.</li>
+                        <li>Report broken ARG elements.</li>
+                        <li>Report anything that doesn't work as intended.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+
+        <button class="nav-arrow next" onclick="moveSlide(1)" aria-label="Next">❯</button>
+    </div>
+
+    <div class="carousel-counter" id="counter">Category 1 of 19</div>
+</section>
+
+<section class="cta-box">
+    <h2>🌟 Ready to Help the Cyber-Shaman?</h2>
+    <p><strong>Mombi-Jombo:</strong> “Eke-beke! What are you waiting for?”</p>
+    <p>
+        Whether you have an unarchived scan, a missing video tape, 
+        a technical fix, a rare developer quote, or an entire collection 
+        to share, your contribution helps preserve the Isle o' Hags for the future!
+    </p>
+
+    <p>
+        <a class="button" href="contribute.html">🤝 CONTRIBUTE TO THE ARCHIVE</a>
+        <a class="button" href="submit.html">Learn How to Submit →</a>
+        <a class="button" href="contact.html">Contact the Archive →</a>
+    </p>
+
+    <p>“Every piece of data matters—even a single Feathery Note!”</p>
+
+    <p><em>Mombi-Jombo raises his shaman Zap Stick, sparks dancing across his technicolor fingers as he gives a confident grin.</em></p>
+
+    <p><strong>“Now go out there and gather those missing Jiggies! Best shaman magic awaits!”</strong></p>
+</section>
+
+<nav class="back">
+    <a href="isle-o-hags.html">← Return to the Isle o' Hags Archive Network</a>
+</nav>
+
+</main>
+
+<footer>
+    <p>Lucoshi's Video Game Palace Archive Network</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const totalSlides = 19;
+    const track = document.getElementById('track');
+    const counter = document.getElementById('counter');
+
+    function moveSlide(direction) {
+        currentIndex += direction;
+        
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+        
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        counter.textContent = `Category ${currentIndex + 1} of ${totalSlides}`;
+    }
+</script>
+
+</body>
+</html>
